@@ -1,0 +1,20 @@
+Documentation:
+  Enabled: false
+Layout/TrailingWhitespace:
+  Enabled: false
+Metrics/LineLength:
+  Exclude:
+    - config/**/*
+    - db/**/*
+    - lib/tasks/seed.rake
+    - script/rails
+Rails/FilePath:
+  Exclude:
+    - 'lib/tasks/seed.rake'
+Metrics/MethodLength:
+  Exclude:
+    - 'db/migrate/*'
+Metrics/BlockLength:
+  Exclude:
+    - db/**/*
+    - config/**/*
