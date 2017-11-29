@@ -1,0 +1,14 @@
+= simple_form_for solution do |form|
+  = form.error_notification
+
+  =form.input :description, as: :text, label: 'Describe your solution.'
+  =form.input :business_opportunities, as: :text, label: 'How does your solution strengthen relationships through business opportunities?'
+  =form.input :implementation_impact, as: :text, label: "How has it been implemented? What's the impact of your solution?"
+  =form.input :skills_experience, as: :text, label: 'Tell us about your skills and experience useful for local communities on site.'
+
+  =form.input :title, as: :string, label: 'Choose a headline to summarise your solution.'
+
+  =form.input :website, as: :string, label: 'If there is a website with more details add here.'
+  =form.input :video_url, as: :string, label: 'Share a url to a video too if you have one.'
+
+  = form.submit 'Save'

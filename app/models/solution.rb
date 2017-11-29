@@ -3,6 +3,6 @@
 class Solution < ApplicationRecord
   belongs_to :user
 
-  validates :title, :description, :business_opportunities,
-            :implementation_impact, presence: true
+  validates :user, :title, :description, :business_opportunities,
+            :implementation_impact, :skills_experience, presence: true
 end
