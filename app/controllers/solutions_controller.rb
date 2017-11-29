@@ -7,11 +7,15 @@ class SolutionsController < ApplicationController
   }
   expose :solutions, -> { Solution.all }
 
+  def show; end
+
+  def index; end
+
   def new; end
 
   def create
     if new_solution.save
-      flash[:success] = 'solution saved'
+      flash[:success] = 'Your solution has been created'
       redirect_to solution_path(new_solution)
     else
       render :new
@@ -20,9 +24,14 @@ class SolutionsController < ApplicationController
 
   def edit; end
 
-  def update; end
-
-  def index; end
+  def update
+    if solution.update(solution_params)
+      flash[:success] = 'Your changes have been saved'
+      redirect_to solution_path(solution)
+    else
+      render :edit
+    end
+  end
 
   def solution_params
     params.require(:solution).permit(
