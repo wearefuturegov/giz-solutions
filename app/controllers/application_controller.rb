@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
 
   def after_sign_in_path_for(*)
     if current_user.solution
-      edit_solution_path(current_user.solution)
+      solution_path(current_user.solution)
     else
       :new_solution
     end
