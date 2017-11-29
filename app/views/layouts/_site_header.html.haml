@@ -1,5 +1,6 @@
 .container
-  %h1.site-header__logo GizSolutions
+  %h1=link_to 'GizSolutions', :root
+  = link_to 'All solutions', :solutions
   - if current_user
     = button_to "Log out", :destroy_user_session, method: :delete
   -else
