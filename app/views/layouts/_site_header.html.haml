@@ -1,2 +1,6 @@
 .container
   %h1.site-header__logo GizSolutions
+  - if current_user
+    = button_to "Log out", :destroy_user_session, method: :delete
+  -else
+    = link_to "Log In", :new_user_session, class: 'button'
