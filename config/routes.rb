@@ -2,5 +2,7 @@
 
 GizSolutions::Application.routes.draw do
   devise_for :users
-  root to: 'application#home'
+  root to: 'pages#home'
+
+  resources :solutions
 end
