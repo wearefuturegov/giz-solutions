@@ -25,7 +25,6 @@ gem 'uglifier'
 
 # DB
 gem 'pg'
-
 gem 'puma'
 # gem 'rails_service_check', git: 'https://github.com/wearefuturegov/rails_service_check'
 
