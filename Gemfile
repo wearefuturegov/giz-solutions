@@ -5,25 +5,23 @@ ruby '2.4.2'
 gem 'rails', '~> 5.1'
 
 # UI
-# gem 'draper'
-# gem 'jquery-rails'
 gem 'haml-rails'
 gem 'sass-rails'
-
-gem 'geff', git: 'https://github.com/wearefuturegov/geff.git'
-
-# Some likely gems
-# gem 'serviceworker-rails'
-# gem 'simple_form'
-# gem 'decent_exposure'
-# gem "httparty"
-
-gem 'devise'
-
-# Use Uglifier as compressor for JavaScript assets
 gem 'uglifier'
 
-# DB
+gem 'geff', git: 'https://github.com/wearefuturegov/geff.git'
+gem 'simple_form'
+
+# Some likely gems
+# gem 'draper'
+# gem 'jquery-rails'
+# gem 'serviceworker-rails'
+# gem "httparty"
+
+gem 'decent_exposure'
+gem 'devise'
+
+# DB and app server
 gem 'pg'
 gem 'puma'
 # gem 'rails_service_check', git: 'https://github.com/wearefuturegov/rails_service_check'
