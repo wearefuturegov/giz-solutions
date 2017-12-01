@@ -8,6 +8,10 @@
 =form.input :title, as: :string, label: 'Choose a headline to summarise your solution.'
 
 =form.input :website, as: :string, label: 'If there is a website with more details add here.'
-=form.input :video_url, as: :string, label: 'Share a url to a video too if you have one.'
+
+%span
+  %small= "From your video on YouTube you need to 1. Select share 2. Choose subsequent Embed option 3. Copy everything that is in the text box and paste here.\nYou can also embed Vimeo, Blip.tv, Viddler and Kickstarter videos in the equivalent way"
+
+=form.input :embedded_video_url, as: :string, label: 'Share a url to a video too if you have one.'
 
 = form.submit 'Save'

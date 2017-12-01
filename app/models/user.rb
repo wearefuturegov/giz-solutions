@@ -8,4 +8,11 @@ class User < ApplicationRecord
          :validatable
 
   has_one :solution, dependent: :destroy
+
+  validates :first_name, :last_name, presence: true
+
+  def name
+    "#{first_name} #{last_name}"
+  end
+
 end

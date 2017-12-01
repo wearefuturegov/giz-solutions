@@ -40,7 +40,7 @@ class SolutionsController < ApplicationController
       :business_opportunities,
       :skills_experience,
       :implementation_impact,
-      :video_url,
+      :embedded_video_url,
       :website
     )
   end

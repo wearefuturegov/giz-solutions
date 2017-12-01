@@ -1,20 +1,29 @@
 .actions
   - if current_user.admin?
-    = button_to 'Delete', solution_path(solution)
+    = button_to 'Archive', solution_path(solution)
   -elsif solution == current_user.solution
     = link_to 'edit', edit_solution_path(solution), class: 'button'
 
 
+%h2=solution.title
+%p="by #{solution.user.name} from #{solution.user.organisation}"
+
+%h2 Our solution
 %p=solution.description
 
+%h2 How it strengthens relationships through business opportunities
 %p=solution.business_opportunities
 
+%h2 How has it been implemented and what
+impact it had
 %p=solution.implementation_impact
 
+%h2 Our Skills and Experience
 %p=solution.skills_experience
 
-%p=solution.title
 
 %p=solution.website
 
-%p=solution.video_url
+- if solution.embedded_video_url
+  .video
+    %iframe=solution.embedded_video_url
