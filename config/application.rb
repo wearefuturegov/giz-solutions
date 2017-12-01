@@ -76,5 +76,22 @@ module GizSolutions
     config.support_email = ENV.fetch('SUPPORT_EMAIL', 'no-reply@example.com')
 
     config.action_mailer.preview_path = Rails.root.join('lib', 'mail_previews')
+
+    s3_conf = {
+      access_key_id: ENV['AWS_ACCESS_KEY_ID'],
+      secret_access_key: ENV['AWS_SECRET_ACCESS_KEY'],
+      bucket: ENV.fetch('S3_BUCKET_NAME')
+    }
+
+    config.paperclip_defaults = {
+      storage: :s3,
+      s3_credentials: s3_conf,
+      bucket: s3_conf[:bucket],
+      s3_region: 'eu-west-2',
+      s3_protocol: 'https',
+      path: ':attachment/:id/:style/:basename.:extension',
+      url: ':s3_domain_url',
+      s3_host_name: 's3-eu-west-2.amazonaws.com'
+    }
   end
 end

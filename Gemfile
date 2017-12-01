@@ -27,6 +27,9 @@ gem 'pg'
 gem 'puma'
 # gem 'rails_service_check', git: 'https://github.com/wearefuturegov/rails_service_check'
 
+gem 'aws-sdk', '~> 2.3'
+gem 'paperclip'
+
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
