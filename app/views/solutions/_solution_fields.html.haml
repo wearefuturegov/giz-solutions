@@ -1,17 +1,17 @@
 = form.error_notification
 
-=form.input :description, as: :text, label: 'Describe your solution.'
-=form.input :business_opportunities, as: :text, label: 'How does your solution strengthen relationships through business opportunities?'
-=form.input :implementation_impact, as: :text, label: "How has it been implemented? What's the impact of your solution?"
-=form.input :skills_experience, as: :text, label: 'Tell us about your skills and experience useful for local communities on site.'
+=form.input :description, as: :text, label: 'Describe your solution.', input_html: { maxlength: 500 }
 
-=form.input :title, as: :string, label: 'Choose a headline to summarise your solution.'
+=form.input :business_opportunities, as: :text, label: 'How does your solution strengthen relationships through business opportunities?', input_html: { maxlength: 500 }
+
+=form.input :implementation_impact, as: :text, label: "How has it been implemented? What's the impact of your solution?", input_html: { maxlength: 500 }
+
+=form.input :skills_experience, as: :text, label: 'Tell us about your skills and experience useful for local communities on site.', input_html: { maxlength: 500 }
+
+=form.input :title, as: :string, label: 'Choose a headline to summarise your solution.', input_html: { maxlength: 140 }
 
 =form.input :website, as: :string, label: 'If there is a website with more details add here.'
 
-%span
-  %small= "From your video on YouTube you need to 1. Select share 2. Choose subsequent Embed option 3. Copy everything that is in the text box and paste here.\nYou can also embed Vimeo, Blip.tv, Viddler and Kickstarter videos in the equivalent way"
-
-=form.input :embedded_video_url, as: :string, label: 'Share a url to a video too if you have one.'
+=form.input :embedded_video_url, as: :string, label: 'Share a url to a video too if you have one.', hint: "From your video on YouTube you need to 1. Select share 2. Choose subsequent Embed option 3. Copy everything that is in the text box and paste here.\nYou can also embed Vimeo, Blip.tv, Viddler and Kickstarter videos in the equivalent way"
 
 = form.submit 'Save'
