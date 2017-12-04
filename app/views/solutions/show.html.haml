@@ -8,6 +8,9 @@
 %h2=solution.title
 %p="by #{solution.user.name} from #{solution.user.organisation}"
 
+.solution_image.big
+  = image_tag solution.hero_image.url
+
 %h2 Our solution
 %p=solution.description
 

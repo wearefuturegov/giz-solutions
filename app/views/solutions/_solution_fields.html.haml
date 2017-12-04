@@ -1,5 +1,7 @@
 = form.error_notification
 
+= form.input :hero_image, as: :file, label: 'Upload new photo'
+
 =form.input :description, as: :text, label: 'Describe your solution.', input_html: { maxlength: 500 }
 
 =form.input :business_opportunities, as: :text, label: 'How does your solution strengthen relationships through business opportunities?', input_html: { maxlength: 500 }
