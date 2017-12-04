@@ -10,11 +10,11 @@ gem 'sass-rails'
 gem 'uglifier'
 
 gem 'geff', git: 'https://github.com/wearefuturegov/geff.git'
+gem 'jquery-rails'
 gem 'simple_form'
 
 # Some likely gems
 # gem 'draper'
-# gem 'jquery-rails'
 # gem 'serviceworker-rails'
 # gem "httparty"
 
