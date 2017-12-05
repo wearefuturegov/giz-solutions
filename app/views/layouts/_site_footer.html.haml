@@ -1,2 +1,10 @@
 .container
-  %p Site footer
+  .half
+    site footer
+
+  .half.align_right
+    = link_to t('buttons.view_all'), :solutions, class: 'button secondary'
+    - if current_user
+      = button_to t('buttons.log_out'), :destroy_user_session, method: :delete, class: 'button secondary'
+    -else
+      = link_to t('buttons.log_in'), :new_user_session, class: 'button secondary'

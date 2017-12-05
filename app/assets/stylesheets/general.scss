@@ -1,0 +1,28 @@
+h1, h2, h3 ,h4 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  @include desktop {
+    font-size: 28px;
+    line-height: 38px;
+  }
+}
+
+
+.grey_block {
+  background-color: $light-gray;
+}
+
+.thinner, .extra_thinner {
+  margin: 0 auto;
+  @include desktop {
+    max-width: 85%;
+  }
+}
+
+.extra_thinner {
+  max-width: 90%;
+  @include desktop {
+    max-width: 75%;
+  }
+}
