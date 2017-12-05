@@ -1,3 +1,8 @@
-%h3 Solutions submitted so far
-
-= render partial: 'solution', collection: solutions
+#sign_up_form.container
+  .full_width
+    .thinner
+      - if solutions.any?
+        %h3=t('solution.all.title')
+        = render partial: 'solution', collection: solutions
+      -else
+        %h3=t('solution.all.none')

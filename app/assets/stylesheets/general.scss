@@ -26,3 +26,11 @@ h1, h2, h3 ,h4 {
     max-width: 75%;
   }
 }
+
+
+.char_count {
+  font-size: 75%;
+  margin-top: ($small-spacing*-1);
+  display: block;
+  margin-bottom: $small-spacing;
+}

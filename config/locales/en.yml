@@ -16,3 +16,9 @@ en:
     line_1: "This is primarily so we can contact you regarding your submission."
     line_2: "It also gives you the option of logging in at a later date to edit your submission."
     line_3: "Note: after signing up you will need to confirm your email address by clicking on the link we send you."
+  solution:
+    create: "Create Your Solution"
+    edit: "Edit Your Solution"
+    all:
+      title: "Solutions submitted so far"
+      none: "No Solutions have been submitted yet"

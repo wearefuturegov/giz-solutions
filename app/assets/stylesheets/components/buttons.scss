@@ -1,8 +1,8 @@
 .button {
   text-transform: uppercase;
-  font-family: $condensed-font-family;
-  font-weight: 800;
-  padding: 0.6em 0.75em;
+  font-family: $condensed-font-family !important;
+  font-weight: 800 !important;
+  padding: 0.6em 0.75em !important;
 
   &.secondary {
     background-color: $light-gray;
