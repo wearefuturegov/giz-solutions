@@ -87,11 +87,11 @@ module GizSolutions
       storage: :s3,
       s3_credentials: s3_conf,
       bucket: s3_conf[:bucket],
-      s3_region: 'eu-west-2',
+      s3_region: ' eu-central-1',
       s3_protocol: 'https',
       path: ':attachment/:id/:style/:basename.:extension',
       url: ':s3_domain_url',
-      s3_host_name: 's3-eu-west-2.amazonaws.com'
+      s3_host_name: 's3-eu-central-1.amazonaws.com'
     }
   end
 end

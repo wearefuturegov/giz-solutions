@@ -41,7 +41,8 @@ class SolutionsController < ApplicationController
       :skills_experience,
       :implementation_impact,
       :embedded_video_url,
-      :website
+      :website,
+      :hero_image
     )
   end
 end
