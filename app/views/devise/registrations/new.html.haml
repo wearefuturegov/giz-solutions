@@ -1,21 +1,26 @@
-%h3 Before you can submit a solution you need to sign up
+.container
+  .full_width
+    .thinner
+      %h3=t('sign_up.title')
 
-%p This is primarily so we can contact you regarding your submission
+      %p=t('sign_up.line_1')
 
-%p It also gives you the option of logging in at a later date to edit your submission.
+      %p=t('sign_up.line_2')
 
-%p Note: after signing up you will need to confirm your email address by clicking on the link we send you.
+      %p=t('sign_up.line_3')
+#sign_up_form.container
+  .full_width
+    .extra_thinner.full_width_inputs.restricted_form
+      = simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+        = f.error_notification
+        .form-inputs
+          = f.input :email, required: true, autofocus: true
+          = f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length)
+          = f.input :password_confirmation, required: true
+          = f.input :first_name, required: true
+          = f.input :last_name, required: true, label: 'Family name'
+          = f.input :organisation
+        .form-actions
+          = f.button :submit, "Sign up"
 
-= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-  = f.error_notification
-  .form-inputs
-    = f.input :email, required: true, autofocus: true
-    = f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length)
-    = f.input :password_confirmation, required: true
-    = f.input :first_name, required: true
-    = f.input :last_name, required: true, label: 'Family name'
-    = f.input :organisation
-  .form-actions
-    = f.button :submit, "Sign up"
-
-= render "devise/shared/links"
+      = render "devise/shared/links"

@@ -1,7 +1,6 @@
 .container
-  %h1=link_to 'GizSolutions', :root
-  = link_to 'All solutions', :solutions
-  - if current_user
-    = button_to "Log out", :destroy_user_session, method: :delete
-  -else
-    = link_to "Log In", :new_user_session, class: 'button'
+  .half
+    %h2=link_to t('strapline'), :root
+  .half.align_right
+    =link_to 'https://www.giz.de', target: '_blank' do
+      =image_tag('giz-logo')

@@ -1,0 +1,15 @@
+.button {
+  text-transform: uppercase;
+  font-family: $condensed-font-family !important;
+  font-weight: 800 !important;
+  padding: 0.6em 0.75em !important;
+
+  &.secondary {
+    background-color: $light-gray;
+    color: $primary-color;
+
+    &:hover {
+      background-color: darken($light-gray, 10%);
+    }
+  }
+}

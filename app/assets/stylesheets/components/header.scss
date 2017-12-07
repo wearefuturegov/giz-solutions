@@ -1,0 +1,14 @@
+header {
+  .half, img {
+    height: 50px;
+  }
+  a {
+    text-decoration: none;
+    vertical-align: middle;
+  }
+  h2 {
+    text-transform: uppercase;
+    font-family: $condensed-font-family;
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,11 @@
+footer {
+  background-color: $primary-color;
+  color: $white;
+  margin-top: 100px;
+  p {
+    margin-bottom: 0;
+  }
+  .button_to {
+    display: inline-block;
+  }
+}

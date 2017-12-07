@@ -1,2 +1,6 @@
-= simple_form_for solution, url: solution_path(solution), method: :put do |form|
-  =render partial: 'solution_fields', locals: { form: form }
+.container
+  .full_width
+    .thinner.full_width_inputs.restricted_form
+      %h2=t('solution.edit')
+      = simple_form_for solution, url: solution_path(solution), method: :put do |form|
+        =render partial: 'solution_fields', locals: { form: form }
