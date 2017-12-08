@@ -20,7 +20,7 @@
           = f.input :first_name, required: true
           = f.input :last_name, required: true, label: 'Family name'
           = f.input :organisation
-        .form-actions
+        .form-actions.full_width_cta
           = f.button :submit, t('buttons.sign_up')
 
       = render "devise/shared/links"

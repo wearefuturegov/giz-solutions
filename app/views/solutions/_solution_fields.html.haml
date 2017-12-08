@@ -22,5 +22,5 @@
 %p You can also embed Vimeo, Blip.tv, Viddler and Kickstarter videos in the equivalent way
 
 =form.input :embedded_video_url, as: :string, label: 'Share a url to a video too if you have one.'
-
-= form.submit 'Save'
+.form-actions.full_width_cta
+  = form.submit t('buttons.save')
