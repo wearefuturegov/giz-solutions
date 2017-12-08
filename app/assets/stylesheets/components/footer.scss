@@ -9,3 +9,11 @@ footer {
     display: inline-block;
   }
 }
+
+.solutions.index {
+  footer {
+    #view_all_btn {
+      display: none;
+    }
+  }
+}
