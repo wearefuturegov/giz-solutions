@@ -10,4 +10,6 @@ $(function(){
 
 $(document).ready(function() {
   $('.simple_form').handleCharCount();
+
+  $('#alerts').alerts();
 });
