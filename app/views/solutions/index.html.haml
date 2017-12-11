@@ -7,6 +7,6 @@
       -else
         %h3=t('solution.all.none')
 
-      - if deleted_solutions.any? && current_user.admin?
+      - if deleted_solutions.any? && current_user&.admin?
         %h3=t('solution.all.deleted_title')
         = render partial: 'deleted_solution', collection: deleted_solutions
