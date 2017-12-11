@@ -21,6 +21,7 @@ class SolutionsController < ApplicationController
 
   def create
     if new_solution.save
+      SolutionMailer.notify_admins(User.admins.collect(&:email), new_solution).deliver_now
       flash[:success] = 'Your solution has been created'
       redirect_to solution_path(new_solution)
     else

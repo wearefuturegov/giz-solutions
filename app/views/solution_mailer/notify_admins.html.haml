@@ -1,0 +1,9 @@
+%p Hi
+
+%p="#{@new_solution.user.name} has just submitted a new solution to the GIZ solutions website"
+
+=link_to 'Take a look', solution_url(@new_solution), class: 'button'
+
+%br
+= render partial: 'shared/email_signature'
+
