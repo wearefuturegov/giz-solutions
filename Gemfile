@@ -20,8 +20,8 @@ gem 'simple_form'
 
 gem 'decent_exposure'
 gem 'devise'
-gem 'ffaker'
 gem 'dotenv-rails'
+gem 'ffaker'
 
 # DB and app server
 gem 'appsignal'

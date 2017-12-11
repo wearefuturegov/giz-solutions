@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class SolutionMailer < ActionMailer::Base
   default from: GizSolutions.config.support_email
 
