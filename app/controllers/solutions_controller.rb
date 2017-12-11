@@ -6,7 +6,7 @@ class SolutionsController < ApplicationController
     Solution.new(solution_params.merge!(user: current_user))
   }
   expose :solutions, -> { Solution.all }
-  expose :deleted_solutions, -> { Solution.only_deleted if current_user.admin? }
+  expose :deleted_solutions, -> { Solution.only_deleted if current_user&.admin? }
 
   def show; end
 
