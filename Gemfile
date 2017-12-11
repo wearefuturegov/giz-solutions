@@ -20,6 +20,8 @@ gem 'simple_form'
 
 gem 'decent_exposure'
 gem 'devise'
+gem 'ffaker'
+gem 'dotenv-rails'
 
 # DB and app server
 gem 'appsignal'
@@ -38,7 +40,6 @@ group :development do
   gem 'brakeman', require: false
   gem 'bullet'
   gem 'byebug'
-  gem 'dotenv-rails'
   gem 'rubocop', require: false
 end
 

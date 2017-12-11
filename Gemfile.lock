@@ -98,6 +98,7 @@ GEM
     erubi (1.7.0)
     erubis (2.7.0)
     execjs (2.7.0)
+    ffaker (2.7.0)
     ffi (1.9.18)
     font-awesome-rails (4.7.0.2)
       railties (>= 3.2, < 5.2)
@@ -262,6 +263,7 @@ DEPENDENCIES
   decent_exposure
   devise
   dotenv-rails
+  ffaker
   geff!
   haml-rails
   jquery-rails
