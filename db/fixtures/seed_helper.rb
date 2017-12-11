@@ -12,13 +12,12 @@ class SeedHelper
   end
 
   def create_user(email_address)
-    user = User.new(email: email_address,
+    User.new(email: email_address,
                     first_name: FFaker::Name.first_name,
                     last_name: FFaker::Name.last_name,
                     confirmed_at: Time.zone.now,
                     password: ENV['DEFAULT_PASSWORD'],
-                    solution: new_solution)
-    user.solution.save && user.save
+                    solution: new_solution).save!
   end
 
   def new_solution
