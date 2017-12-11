@@ -12,7 +12,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20_171_201_165_132) do
+ActiveRecord::Schema.define(version: 20_171_208_165_100) do
   # These are extensions that must be enabled in order to support this database
   enable_extension 'plpgsql'
 
@@ -31,6 +31,8 @@ ActiveRecord::Schema.define(version: 20_171_201_165_132) do
     t.string 'hero_image_content_type'
     t.integer 'hero_image_file_size'
     t.datetime 'hero_image_updated_at'
+    t.datetime 'deleted_at'
+    t.index ['deleted_at'], name: 'index_solutions_on_deleted_at'
     t.index ['user_id'], name: 'index_solutions_on_user_id'
   end
 

@@ -30,6 +30,8 @@ gem 'puma'
 gem 'aws-sdk', '~> 2.3'
 gem 'paperclip'
 
+gem 'paranoia'
+
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'

@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class Solution < ApplicationRecord
+  acts_as_paranoid
   belongs_to :user
 
   validates :user, :hero_image, :title, :description, :business_opportunities,

@@ -21,4 +21,5 @@ en:
     edit: "Edit Your Solution"
     all:
       title: "Solutions submitted so far"
-      none: "No Solutions have been submitted yet"
+      deleted_title: "These solutions have been archived"
+      none: "No Solutions have been published yet"
