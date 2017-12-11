@@ -2,25 +2,28 @@
 
 = form.input :hero_image, as: :file, label: 'Upload new photo'
 
-=form.input :description, as: :text, label: 'Describe your solution.', input_html: { maxlength: 500 }
+=form.input :description, as: :text, label: 'Describe your solution:', input_html: { maxlength: 500 }
 
 =form.input :business_opportunities, as: :text, label: 'How does your solution strengthen relationships through business opportunities?', input_html: { maxlength: 500 }
 
 =form.input :implementation_impact, as: :text, label: "How has it been implemented? What's the impact of your solution?", input_html: { maxlength: 500 }
 
-=form.input :skills_experience, as: :text, label: 'Tell us about your skills and experience useful for local communities on site.', input_html: { maxlength: 500 }
+=form.input :skills_experience, as: :text, label: 'Tell us about your skills and experience useful for local communities on site:', input_html: { maxlength: 500 }
 
-=form.input :title, as: :string, label: 'Choose a headline to summarise your solution.', input_html: { maxlength: 140 }
+=form.input :title, as: :string, label: 'Choose a headline to summarise your solution:', input_html: { maxlength: 60 }
 
-=form.input :website, as: :string, label: 'If there is a website with more details add here.'
+=form.input :website, as: :string, label: 'If there is a website with more details add here:'
 
-%p From your video on YouTube you need to:
-%ol.default
-  %li Select share
-  %li Choose subsequent Embed option
-  %li Copy everything that is in the text box and paste here.
-%p You can also embed Vimeo, Blip.tv, Viddler and Kickstarter videos in the equivalent way
+%label
+  Share a url to a video too if you have one.
+  .normal
+    %p From your video on YouTube you need to:
+    %ol.default
+      %li Select share
+      %li Choose subsequent Embed option
+      %li Copy everything that is in the text box and paste here.
+    %p You can also embed Vimeo, Blip.tv, Viddler and Kickstarter videos in the same way
 
-=form.input :embedded_video_url, as: :string, label: 'Share a url to a video too if you have one.'
-.form-actions.full_width_cta
-  = form.submit t('buttons.save')
+  =form.input :embedded_video_url, as: :string, label: 'Enter URL here:'
+  .form-actions.full_width_cta
+    = form.submit t('buttons.save')

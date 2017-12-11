@@ -11,13 +11,18 @@
 
 .form-actions {
   margin-top: 30px;
+
+  &.full_width_cta {
+    input {
+      width: 100%;
+    }
+  }
 }
 .simple_form {
   margin-bottom: 25px;
 }
-
-.full_width_cta {
-  input {
-    width: 100%;
+#new_solution, .edit_solution {
+  .input {
+    margin-bottom: 40px;
   }
 }
