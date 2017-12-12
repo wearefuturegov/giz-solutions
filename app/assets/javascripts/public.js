@@ -10,4 +10,10 @@ $(function(){
 
 $(document).ready(function() {
   $('.simple_form').handleCharCount();
+
+  $('#alerts').alerts();
+
+  $('.single_solution').solutions();
+
+  $('.auto_fit_image').autoFitImage();
 });

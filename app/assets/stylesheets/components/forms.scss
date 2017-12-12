@@ -1,0 +1,28 @@
+#{$all-text-inputs} {
+  border: 1.5px solid rgba($black, 0.3);
+  &:hover {
+    border: 1.5px solid rgba($black, 0.6);
+  }
+  &:focus {
+    box-shadow: none;
+    border: 1.5px solid rgba($black, 1);
+  }
+}
+
+.form-actions {
+  margin-top: 30px;
+
+  &.full_width_cta {
+    input {
+      width: 100%;
+    }
+  }
+}
+.simple_form {
+  margin-bottom: 25px;
+}
+#new_solution, .edit_solution {
+  .input {
+    margin-bottom: 40px;
+  }
+}

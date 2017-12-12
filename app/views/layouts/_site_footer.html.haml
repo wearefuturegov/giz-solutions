@@ -3,7 +3,7 @@
     site footer
 
   .half.align_right
-    = link_to t('buttons.view_all'), :solutions, class: 'button secondary'
+    = link_to t('buttons.view_all'), :solutions, class: 'button secondary', id: 'view_all_btn'
     - if current_user
       = button_to t('buttons.log_out'), :destroy_user_session, method: :delete, class: 'button secondary'
     -else

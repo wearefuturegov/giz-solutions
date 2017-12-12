@@ -11,5 +11,9 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
+//= require geff/alerts
 //= require char-limit
+//= require solutions
+//= require geff/auto-fit-image
+//
 //= require public

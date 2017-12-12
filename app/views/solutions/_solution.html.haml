@@ -1,3 +1,6 @@
-.solution_image.small
-  = image_tag solution.hero_image.url(:medium)
-=link_to solution.title, solution_path(solution)
+.single_solution.third
+  =link_to solution_path(solution) do
+    .solution_image
+      = image_tag solution.hero_image.url, class: 'auto_fit_image'
+    .solution_content
+      =solution.title
