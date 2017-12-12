@@ -1,0 +1,8 @@
+- unless solution.winner?
+  = button_to 'Archive', solution_path(solution), method: :delete
+
+- if GizSolutions.config.application_state == 'judging'
+  - if solution.winner?
+    = button_to 'Undo Winner', solution_path(solution, winner: false), method: :put
+  - else
+    = button_to 'Make winner', solution_path(solution, winner: true), method: :put

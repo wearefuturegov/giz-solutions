@@ -1,6 +1,6 @@
 .actions
   - if current_user&.admin?
-    = button_to 'Archive', solution_path(solution), method: :delete
+    = render partial: 'admin_buttons'
   -elsif solution == current_user&.solution
     = link_to 'edit', edit_solution_path(solution), class: 'button'
 

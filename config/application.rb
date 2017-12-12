@@ -93,5 +93,8 @@ module GizSolutions
       url: ':s3_domain_url',
       s3_host_name: 's3-eu-central-1.amazonaws.com'
     }
+
+    # %w[collection judging completed]
+    config.application_state = ENV.fetch('SOLUTIONS_STAGE', 'collection')
   end
 end
