@@ -15,7 +15,7 @@
 =form.input :website, as: :string, label: 'If there is a website with more details add here:'
 
 %label
-  Share a url to a video too if you have one.
+  Share a video too if you have one.
   .normal
     %p From your video on YouTube you need to:
     %ol.default
@@ -24,6 +24,6 @@
       %li Copy everything that is in the text box and paste here.
     %p You can also embed Vimeo, Blip.tv, Viddler and Kickstarter videos in the same way
 
-  =form.input :embedded_video_url, as: :string, label: 'Enter URL here:'
+  =form.input :embedded_video_url, as: :string, label: 'Enter embed code here:'
   .form-actions.full_width_cta
     = form.submit t('buttons.save')

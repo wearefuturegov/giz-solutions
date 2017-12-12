@@ -1,6 +1,6 @@
 .single_solution.third
   =link_to solution_path(solution) do
     .solution_image
-      = image_tag solution.hero_image.url
+      = image_tag solution.hero_image.url, class: 'auto_fit_image'
     .solution_content
       =solution.title
