@@ -98,6 +98,7 @@ GEM
     erubi (1.7.0)
     erubis (2.7.0)
     execjs (2.7.0)
+    ffaker (2.7.0)
     ffi (1.9.18)
     font-awesome-rails (4.7.0.2)
       railties (>= 3.2, < 5.2)
@@ -153,6 +154,8 @@ GEM
       mime-types
       mimemagic (~> 0.3.0)
     parallel (1.12.0)
+    paranoia (2.4.0)
+      activerecord (>= 4.0, < 5.2)
     parser (2.4.0.2)
       ast (~> 2.3)
     pg (0.21.0)
@@ -260,10 +263,12 @@ DEPENDENCIES
   decent_exposure
   devise
   dotenv-rails
+  ffaker
   geff!
   haml-rails
   jquery-rails
   paperclip
+  paranoia
   pg
   puma
   rails (~> 5.1)

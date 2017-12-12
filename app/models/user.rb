@@ -11,6 +11,8 @@ class User < ApplicationRecord
 
   validates :first_name, :last_name, presence: true
 
+  scope :admins, -> { where(admin: true) }
+
   def name
     "#{first_name} #{last_name}"
   end

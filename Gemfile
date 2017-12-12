@@ -20,6 +20,8 @@ gem 'simple_form'
 
 gem 'decent_exposure'
 gem 'devise'
+gem 'dotenv-rails'
+gem 'ffaker'
 
 # DB and app server
 gem 'appsignal'
@@ -30,13 +32,14 @@ gem 'puma'
 gem 'aws-sdk', '~> 2.3'
 gem 'paperclip'
 
+gem 'paranoia'
+
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'brakeman', require: false
   gem 'bullet'
   gem 'byebug'
-  gem 'dotenv-rails'
   gem 'rubocop', require: false
 end
 
