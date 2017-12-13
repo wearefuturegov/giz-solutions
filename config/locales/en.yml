@@ -12,6 +12,13 @@ en:
     view_all: "View all solutions"
     log_out: "Log out"
     log_in: "Log In"
+    admin: "Admin"
+    announce_winners: "Anounce winners"
+    continue_collection: "Continue accepting submissions"
+    deselect_winner: 'Deselect winner'
+    select_winner: 'Select winner'
+    archive: 'Archive'
+    judging: "Start judging"
     sign_up: "Sign Up"
     go_home: "Find out more"
     save: "Save Solution"

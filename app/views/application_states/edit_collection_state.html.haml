@@ -1,0 +1,7 @@
+.container
+  .full_width
+    %h3 Are you ready to Announce the winners?
+
+    = button_to I18n.t('buttons.judging'), application_state_path(state: ApplicationState.judging), method: :put
+
+    %p Once this is executed the button to submit more solutions will be hidden while you select three winners.

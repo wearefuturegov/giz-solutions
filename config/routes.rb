@@ -5,4 +5,5 @@ GizSolutions::Application.routes.draw do
   root to: 'pages#home'
 
   resources :solutions
+  resource :application_state, only: %i[edit update]
 end

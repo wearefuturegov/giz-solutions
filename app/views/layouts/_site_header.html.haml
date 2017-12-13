@@ -2,5 +2,6 @@
   .half
     %h2=link_to t('strapline'), :root
   .half.align_right
+    =link_to t('buttons.admin'), :edit_application_state if admin_logged_in
     =link_to 'https://www.giz.de', target: '_blank' do
       =image_tag('giz-logo')
