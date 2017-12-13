@@ -14,6 +14,10 @@ class SolutionsController < ApplicationController
     Solution.only_deleted if admin_logged_in
   }
 
+  expose :can_edit_solution, lambda {
+    admin_logged_in || current_user.solution == solution
+  }
+
   def show; end
 
   def index; end
@@ -39,12 +43,6 @@ class SolutionsController < ApplicationController
 
   def edit; end
 
-  def authenticate_can_edit!
-    return if admin_logged_in
-    return if current_user.solution == solution
-    not_authorised
-  end
-
   def update
     if solution.update(solution_params)
       flash[:success] = 'Your changes have been saved'
@@ -52,6 +50,13 @@ class SolutionsController < ApplicationController
     else
       render :edit
     end
+  end
+
+  private
+
+  def authenticate_can_edit!
+    return if can_edit_solution
+    not_authorised
   end
 
   def solution_params

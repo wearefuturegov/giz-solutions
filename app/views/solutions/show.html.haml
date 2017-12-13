@@ -1,7 +1,7 @@
 .actions
   - if admin_logged_in
     = render partial: 'admin_buttons'
-  -elsif solution == current_user&.solution
+  -if can_edit_solution
     = link_to 'edit', edit_solution_path(solution), class: 'button'
 
 
