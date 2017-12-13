@@ -1,13 +1,17 @@
 # frozen_string_literal: true
 
 class SolutionsController < ApplicationController
+  before_action :authenticate_user!, except: %i[show create]
+  before_action :authenticate_admin!, only: :destroy
+  before_action :authenticate_can_edit!, only: %i[update edit]
+
   expose :solution
   expose :new_solution, lambda {
     Solution.new(solution_params.merge!(user: current_user))
   }
   expose :solutions, -> { Solution.all }
   expose :deleted_solutions, lambda {
-    Solution.only_deleted if current_user&.admin?
+    Solution.only_deleted if admin_logged_in
   }
 
   def show; end
@@ -17,7 +21,7 @@ class SolutionsController < ApplicationController
   def new; end
 
   def destroy
-    solution.delete if current_user.admin?
+    solution.delete
     redirect_to :solutions
   end
 
@@ -34,6 +38,12 @@ class SolutionsController < ApplicationController
   end
 
   def edit; end
+
+  def authenticate_can_edit!
+    return if admin_logged_in
+    return if current_user.solution == solution
+    not_authorised
+  end
 
   def update
     if solution.update(solution_params)
