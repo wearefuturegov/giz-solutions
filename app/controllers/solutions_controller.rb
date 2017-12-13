@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class SolutionsController < ApplicationController
-  before_action :authenticate_user!, except: %i[show create]
+  before_action :authenticate_user!, except: %i[index show]
   before_action :authenticate_admin!, only: :destroy
   before_action :authenticate_can_edit!, only: %i[update edit]
 
@@ -15,7 +15,7 @@ class SolutionsController < ApplicationController
   }
 
   expose :can_edit_solution, lambda {
-    admin_logged_in || current_user.solution == solution
+    admin_logged_in || current_user&.solution == solution
   }
 
   def show; end
