@@ -15,6 +15,7 @@ en:
     admin: "Admin"
     announce_winners: "Anounce winners"
     continue_collection: "Continue accepting submissions"
+    continue_judging: "Reselect winners"
     deselect_winner: 'Deselect winner'
     select_winner: 'Select winner'
     archive: 'Archive'
