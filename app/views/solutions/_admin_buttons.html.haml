@@ -3,6 +3,6 @@
 
 - if GizSolutions.config.application_state == ApplicationState.judging
   - if solution.winner?
-    = button_to I18n.t('buttons.deselect_winner'), solution_path(solution, winner: false), method: :put
+    = button_to I18n.t('buttons.deselect_winner'), solution_winners_path(solution), method: :put, remote: true
   - else
-    = button_to I18n.t('buttons.select_winner'), solution_path(solution, winner: true), method: :put
+    = button_to I18n.t('buttons.select_winner'), solution_winners_path(solution), method: :put, remote: true
