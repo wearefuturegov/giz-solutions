@@ -12,9 +12,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20_171_212_165_331) do
+ActiveRecord::Schema.define(version: 20_171_213_175_158) do
   # These are extensions that must be enabled in order to support this database
   enable_extension 'plpgsql'
+
+  create_table 'application_states', force: :cascade do |t|
+    t.integer 'state', default: 0
+  end
 
   create_table 'solutions', force: :cascade do |t|
     t.string 'embedded_video_url'

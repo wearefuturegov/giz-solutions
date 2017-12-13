@@ -2,16 +2,16 @@
   .full_width
     %h3 Are you ready to Announce the winners?
 
-    =button_to I18n.t('buttons.announce_winners'), application_state_path(state: ApplicationState.announce_winners), method: :put
+    =button_to I18n.t('buttons.announce_winners'), application_state_path(state: ApplicationState.states['announce_winners']), method: :put
 
     %p Once this is executed the three winners will be highlighted on the home page. The currently selected winners are listed here for shortlisting purposes:
 
     -if winning_solutions.any?
-      = render partial: 'winning_solution', collection: winning_solutions
+      = render partial: 'solutions/solution', collection: winning_solutions
 
     -else
       %p No winners selected so far
 
     %p Or
 
-    =button_to I18n.t('buttons.continue_collection'), application_state_path(state: ApplicationState.collection), method: :put
+    =button_to I18n.t('buttons.continue_collection'), application_state_path(state: ApplicationState.states['collection']), method: :put
