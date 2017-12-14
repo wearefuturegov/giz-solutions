@@ -9,7 +9,16 @@ class SolutionsController < ApplicationController
   expose :new_solution, lambda {
     Solution.new(solution_params.merge!(user: current_user))
   }
-  expose :solutions, -> { Solution.all }
+
+  expose :winning_solutions, -> { Solution.winners }
+  expose :solutions, lambda {
+    if ApplicationState.instance.announce_winners?
+      Solution.where(winner: false)
+    else
+      Solution.all
+    end
+  }
+
   expose :deleted_solutions, lambda {
     Solution.only_deleted if admin_logged_in
   }

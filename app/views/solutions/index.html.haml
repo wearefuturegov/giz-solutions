@@ -1,13 +1,17 @@
 .container
   .full_width
     .thinner
+      - if ApplicationState.instance.announce_winners?
+        %h3=t('solution.winners.title')
+        = render partial: 'solutions/solution', collection: winning_solutions
+
       - if solutions.any?
-        %h3=t('solution.all.title')
+        %h3= solutions_title
         #all_solutions.inner_container
           = render partial: 'solution', collection: solutions
       -else
         %h3=t('solution.all.none')
-        
+
       - if deleted_solutions.present?
         %h3=t('solution.all.deleted_title')
         = render partial: 'deleted_solution', collection: deleted_solutions

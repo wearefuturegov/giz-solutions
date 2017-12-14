@@ -33,7 +33,17 @@ en:
   solution:
     create: "Create Your Solution"
     edit: "Edit Your Solution"
+    judging:
+      title: 'The submissions are currently being Judge and a winner will be selected soon'
+    winners:
+      title: 'The winners were:'
+    others:
+      title: 'Other solutions submitted'
+    so_far:
+      title: 'Solutions submitted so far'
+    deleted:
+      title: 'These solutions have been archived'
+    none:
+      title: 'No Solutions have been published yet'
     all:
-      title: "Solutions submitted so far"
-      deleted_title: "These solutions have been archived"
-      none: "No Solutions have been published yet"
+      title: "Solutions submitted"

@@ -13,8 +13,8 @@
     - if ApplicationState.instance.collection?
       =link_to t('buttons.submit_solution'), :new_user_registration, class: 'button'
     - elsif ApplicationState.instance.judging?
-      %p The submissions are currently being Judge and a winner will be selected soon
+      %p=t('solution.judging.title')
     - elsif ApplicationState.instance.announce_winners?
-      %p And the winners were:
+      %p=t('solution.winners.title')
       = render partial: 'solutions/solution', collection: winning_solutions
     =link_to t('buttons.browse_solution'), :solutions, class: 'button secondary'
