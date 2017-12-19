@@ -1,32 +1,44 @@
-.actions
-  - if current_user&.admin?
-    = button_to 'Archive', solution_path(solution), method: :delete
-  -elsif solution == current_user&.solution
-    = link_to 'edit', edit_solution_path(solution), class: 'button'
+#solution_show.container
+  .full_width
+    .thinner
+      .actions
+        - if current_user&.admin?
+          = button_to 'Archive', solution_path(solution), method: :delete
+        -elsif solution == current_user&.solution
+          = link_to 'edit', edit_solution_path(solution), class: 'button'
+
+      .solution_image
+        = image_tag solution.hero_image.url, class: 'auto_fit_image'
+
+      %h1=solution.title
+      %p="by #{solution.user.name}"
+      -if solution.user.organisation
+        ="from #{solution.user.organisation}"
+
+      =link_to solution.website, solution.website, :target => "_blank"
+
+      %hr
+
+      %h2 Our solution
+      %p=solution.description
+
+      %hr
+
+      %h2 How it strengthens relationships through business opportunities
+      %p=solution.business_opportunities
+
+      %hr
+
+      %h2 How has it been implemented and what
+      impact it had
+      %p=solution.implementation_impact
+
+      %hr
+
+      %h2 Our Skills and Experience
+      %p=solution.skills_experience
 
 
-%h2=solution.title
-%p="by #{solution.user.name} from #{solution.user.organisation}"
-
-.solution_image.big
-  = image_tag solution.hero_image.url
-
-%h2 Our solution
-%p=solution.description
-
-%h2 How it strengthens relationships through business opportunities
-%p=solution.business_opportunities
-
-%h2 How has it been implemented and what
-impact it had
-%p=solution.implementation_impact
-
-%h2 Our Skills and Experience
-%p=solution.skills_experience
-
-
-%p=solution.website
-
-- if solution.embedded_video_url
-  .video
-    =solution.embedded_video_url.html_safe
+      - if solution.embedded_video_url
+        .video
+          =solution.embedded_video_url.html_safe
