@@ -1,6 +1,23 @@
+.single_solution {
+  margin-bottom: 15px;
+}
 
+.solution_content {
+  min-height: 93px;
+}
 
 .solution_image {
   width: 100%;
   overflow: hidden;
+}
+
+#solution_show {
+  .solution_image {
+    overflow: hidden;
+    height: 300px;
+    margin-bottom: 40px;
+  }
+  h1 {
+    margin-bottom: 0;
+  }
 }

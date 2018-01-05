@@ -14,6 +14,8 @@ $(document).ready(function() {
   $('#alerts').alerts();
 
   $('.single_solution').solutions();
+});
 
+$(window).load(function() {
   $('.auto_fit_image').autoFitImage();
 });
