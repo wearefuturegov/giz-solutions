@@ -35,3 +35,7 @@ nav {
     }
   }
 }
+
+.sessions.new #log_in_nav, .solutions.index #browse_nav, .registrations.new #submit_nav, .pages.home #overview_nav {
+  border-bottom: 2px solid;
+}

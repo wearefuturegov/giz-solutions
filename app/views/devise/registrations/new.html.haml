@@ -1,6 +1,119 @@
 .container
   .full_width
-    .thinner
+    %h1 Everything you need to know before submitting
+
+    %p Before submitting your solution please read through the brief PDF document, and the information below. When you are ready to submit you will need to first sign up to create an account, this is so you can edit your solution later.
+
+    .large_cta.full_width.center
+      .button Download Brief
+      %a.button.secondary{href: '#sign_up_info'} Submit Solution
+
+.container.small_break
+  .full_width
+    %hr
+
+.container
+  .full_width
+    .accordion
+      %h3 Why you should participate
+      .inner_container
+        .full_width
+          %p.bold Create the solutions of tomorrow and shape the future together with inspiring visionaries from all over the world! Make a contribution to improving peoples lives living in refugee and host communities.
+
+        .half
+          %p.bold.red Gain some fame. 
+          %p You have the chance to see your solution promoted through social media, partners and inside the GIZ network.
+
+        .half
+          %p.bold.red Become a member of a team. 
+          %p You will collaborate in an international team of expert designers, development workers and local community members. Benefit from the combined knowledge and creativity.
+
+        .half
+          %p.bold.red Access the expertise of GIZ. 
+          %p You have access to the expertise and support of GIZ, Germany’s development collaboration and other renowned organizations.
+
+        .half
+          %p.bold.red Receive funding for your solution to be develop and scaled. 
+          %p Your solution can receive up to 10,000 euros to be developed further and implemented in Uganda, Aroa.
+
+        .half
+          %p.bold.red Visit Uganda and meet the local community .
+          %p Be part of an one week design workshop on-site in Uganda. Develop your skills in order to make great solutions even better and gain intercultural competences by working in an international team. Hand over your solution to local community members. All travel costs will be covered!
+
+.container.small_break
+  .full_width
+    %hr
+
+.container
+  .full_width
+    .accordion
+      %h3 Who can participate and what you need to bring
+
+      .inner_container
+        .full_width
+          %p.bold We are hoping to receive a wide range of possible solutions. In order to participate you need to:
+
+        .half
+          %p.bold.red Be able to spend a week in Arua, Uganda.
+          %p Together, we will spend one week in Uganda, where you can share your experience with locals from host and refugee communities. We will follow a design-led approach to develop rapid prototypes and seek feedback from local users. Flight and accommodation will be payed for.
+
+        .half
+          %p.bold.red Submit a tested and implemented solution.
+          %p We don’t want to reinvent the wheel, but build on existing knowledge and experience. You can participate as an NGO, a private individual or a company – as long as your idea has been tested and implemented elsewhere.
+
+        .half
+          %p.bold.red A solution that can be adapted and handed over.
+          %p The solution does not need to be rooted in Uganda, but needs to have potential to be adapted to fit the local context. The objective is for locals to take ownership and continue adapting it.
+
+.container.small_break
+  .full_width
+    %hr
+
+.container
+  .full_width
+    .accordion
+      %h3 What good looks like
+
+      .inner_container
+        .full_width
+          %p.bold A jury – including members from GIZ, other leading organisations and possible users - will select the three best ideas. A good idea follows these principals:
+
+        .half
+          %p.bold.red Potential to scale.
+          %p We picked Uganda as an exemplar. Similar challenges exist in other countries like Jordan, Tanzania or Iraq. We are looking for ideas that have the potential to scale, first in Uganda than beyond.
+
+        .half
+          %p.bold.red Creating a benefit for refugee and host.
+          %p We are looking for solutions that are not only focused on supporting refugees, but also provide a benefit to members of host communities.
+
+        .half
+          %p.bold.red Strengthening relationships.
+          %p We are looking for solutions that provide members of both communities opportunities to meet, collaborate and get to know each other.
+
+.container.small_break
+  .full_width
+    %hr
+
+.container
+  .full_width
+    .accordion
+      %h3 Who to get in touch with if you have more questions
+
+      .inner_container
+        .full_width
+          %p.bold Christina Hese – Community manager
+          %p=mail_to("christina.hese@giz.de")
+
+      .large_cta.full_width.center
+        .button Download Brief
+        %a.button.secondary{href: '#sign_up_info'} Submit Solution
+.container.small_break
+  .full_width
+    %hr
+
+#sign_up_info
+  .container
+    .full_width
       %h3=t('sign_up.title')
 
       %p=t('sign_up.line_1')
@@ -8,19 +121,19 @@
       %p=t('sign_up.line_2')
 
       %p=t('sign_up.line_3')
-#sign_up_form.container
-  .full_width
-    .extra_thinner.full_width_inputs.restricted_form
-      = simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-        = f.error_notification
-        .form-inputs
-          = f.input :email, required: true, autofocus: true
-          = f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length)
-          = f.input :password_confirmation, required: true
-          = f.input :first_name, required: true
-          = f.input :last_name, required: true, label: 'Family name'
-          = f.input :organisation
-        .form-actions.full_width_cta
-          = f.button :submit, t('buttons.sign_up')
+  #sign_up_form.container
+    .full_width
+      .thinner.full_width_inputs.restricted_form
+        = simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+          = f.error_notification
+          .form-inputs
+            = f.input :email, required: true, autofocus: true
+            = f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length)
+            = f.input :password_confirmation, required: true
+            = f.input :first_name, required: true
+            = f.input :last_name, required: true, label: 'Family name'
+            = f.input :organisation
+          .form-actions.full_width_cta
+            = f.button :submit, t('buttons.sign_up')
 
-      = render "devise/shared/links"
+        = render "devise/shared/links"

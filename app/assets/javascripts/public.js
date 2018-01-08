@@ -13,7 +13,7 @@ $(document).ready(function() {
 
   $('#alerts').alerts();
 
-  $('body').smoothScroll(500);
+  $('body').smoothScroll(750);
 
   $('.single_solution').solutions();
 });

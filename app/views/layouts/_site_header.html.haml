@@ -8,9 +8,10 @@
 %nav
   .container
     .full_width
-      = link_to t('buttons.browse_solution'), :solutions, id: 'view_all_btn'
-      = link_to t('buttons.submit_solution'), :new_user_registration, id: 'view_all_btn'
+      = link_to t('buttons.overview'), :root, id: 'overview_nav'
+      = link_to t('buttons.submit_solution'), :new_user_registration, id: 'submit_nav'
+      = link_to t('buttons.browse_solution'), :solutions, id: 'browse_nav'
       - if current_user
         = button_to t('buttons.log_out'), :destroy_user_session, method: :delete
       -else
-        = link_to t('buttons.log_in'), :new_user_session
+        = link_to t('buttons.log_in'), :new_user_session, id: 'log_in_nav'

@@ -59,3 +59,16 @@ h1 {
   text-transform: uppercase;
   margin-bottom: 5px;
 }
+
+.small_break {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.red {
+  color: $primary-color;
+}
+
+.clear {
+  clear: both;
+}
