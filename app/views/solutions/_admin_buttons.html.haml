@@ -1,0 +1,8 @@
+- unless solution.winner?
+  = button_to I18n.t('buttons.archive'), solution_path(solution), method: :delete
+
+- if ApplicationState.instance.judging?
+  - if solution.winner?
+    = button_to I18n.t('buttons.deselect_winner'), solution_winners_path(solution), method: :put, remote: true
+  - else
+    = button_to I18n.t('buttons.select_winner'), solution_winners_path(solution), method: :put, remote: true
