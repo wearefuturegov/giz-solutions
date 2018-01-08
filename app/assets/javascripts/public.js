@@ -13,6 +13,8 @@ $(document).ready(function() {
 
   $('#alerts').alerts();
 
+  $('body').smoothScroll(500);
+
   $('.single_solution').solutions();
 });
 
