@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/wearefuturegov/geff.git
-  revision: 603e385f62a0eaa2002aae2cedd3c7ac7623a173
+  revision: c6802a81c1ea25846902f86acaf8022940aaf9dd
   specs:
     geff (0.1.0)
       bourbon
@@ -67,7 +67,7 @@ GEM
       rack (>= 0.9.0)
     binding_of_caller (0.7.3)
       debug_inspector (>= 0.0.1)
-    bourbon (4.3.4)
+    bourbon (5.0.0)
       sass (~> 3.4)
       thor (~> 0.19)
     brakeman (4.1.1)
@@ -137,13 +137,13 @@ GEM
     mimemagic (0.3.2)
     mini_mime (1.0.0)
     mini_portile2 (2.3.0)
-    minitest (5.10.3)
+    minitest (5.11.1)
     mountain_view (0.12.3)
       rails (>= 3.2.0)
     neat (2.1.0)
       sass (~> 3.4)
       thor (~> 0.19)
-    nio4r (2.1.0)
+    nio4r (2.2.0)
     nokogiri (1.8.1)
       mini_portile2 (~> 2.3.0)
     orm_adapter (0.5.0)
@@ -210,7 +210,7 @@ GEM
     ruby-progressbar (1.9.0)
     ruby_parser (3.10.1)
       sexp_processor (~> 4.9)
-    sass (3.5.3)
+    sass (3.5.5)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
