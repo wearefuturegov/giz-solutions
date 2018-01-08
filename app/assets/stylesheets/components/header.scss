@@ -10,5 +10,28 @@ header {
     text-transform: uppercase;
     font-family: $condensed-font-family;
     margin-bottom: 0;
+    font-weight: 600;
+  }
+}
+
+
+nav {
+  background-color: $light-gray;
+  color: $primary-color;
+  font-family: $condensed-font-family;
+  .container {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  a {
+    color: $primary-color;
+    font-weight: 600;
+    padding: 2px;
+    margin-right: 15px;
+
+    &:hover {
+      color: $primary-color;
+      border-bottom: 2px solid;
+    }
   }
 }

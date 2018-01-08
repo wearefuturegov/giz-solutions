@@ -5,11 +5,11 @@ en:
   strapline: "Building on Innovation"
   buttons:
     submit_solution: "Submit Your Solution"
-    browse_solution: "Browse all Solutions"
+    browse_solution: "Browse All Solutions"
     view_all: "View all solutions"
     log_out: "Log out"
     log_in: "Log In"
-    sign_up: "Sign Up"
+    sign_up: "Sign up to create your submission"
     go_home: "Find out more"
     save: "Save Solution"
   home:

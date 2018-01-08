@@ -12,4 +12,8 @@
       background-color: darken($light-gray, 10%);
     }
   }
+  @include mobile {
+    margin-bottom: 10px !important;
+    display: block;
+  }
 }

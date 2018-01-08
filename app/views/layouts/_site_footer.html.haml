@@ -1,10 +1,8 @@
 .container
-  .half
-    site footer
-
-  .half.align_right
-    = link_to t('buttons.view_all'), :solutions, class: 'button secondary', id: 'view_all_btn'
-    - if current_user
-      = button_to t('buttons.log_out'), :destroy_user_session, method: :delete, class: 'button secondary'
-    -else
-      = link_to t('buttons.log_in'), :new_user_session, class: 'button secondary'
+  .third
+    %ul
+      %li Registration information
+      %li Data Protection
+      %li Legal Information
+      %li Sitemap
+      %li Login for staff

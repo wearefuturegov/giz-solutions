@@ -1,14 +1,56 @@
-.grey_block
-  .container
-    .full_width
-      .extra_thinner
-        %h3=t('home.title')
+.hero
+  =image_tag("hero1.jpg")
+  .hero_overlay
+    .container
+      .full_width
+        %h2 Open call for solutions
+        %h1 Shared business opportunities for refugees and host communities.
 
+#home_brief.container
+  .half
+    .red_block
+      .brief Your Brief
+      %hr
+      .tagline How can we increase financial independence of refugees through shared business opportunities with their host communities?
+    =render partial: "cta_buttons"
+  .half
+    .red_title The challenge
+    %p Refugees often live in displacement for decades, many will never return to their homes. Therefore is is critical to enable them to become financially independent and build a life on their own – in a way that benefits both the refugees and the communities they now live in.
+
+    .red_title The opportunity
+    %p There is a huge untapped potential to create shared business opportunities for refugees and host communities.
+    %p Think of co-working spaces, shared workshops and joint creation of new services – doing business with each other provides an opportunity to meet, reduce prejudices and improve one’s livelihood.
+    %p In Kampala for example, 21% of refugees own a business that employs other people—and 40% of those employees are Ugandan nationals.
+    %p So how can we create more shared business opportunities between both communities?
 .container
   .full_width
-    .thinner
-      %p GIZ is looking for innovators, entrepreneurs, start-ups, NGO both small and large to submit their solutions in an open call for ideas.
-      %p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-  .large_cta.full_width.center
-    =link_to t('buttons.submit_solution'), :new_user_registration, class: 'button'
-    =link_to t('buttons.browse_solution'), :solutions, class: 'button secondary'
+    %hr
+#meet_community.container
+  .full_width
+
+    %h2 Meet members of the host and refugee community
+
+    .inner_container
+      .third
+        .image= image_tag "person_1.jpg", class: 'auto_fit_image'
+        .content This is Robert and was born in Uganda. He is a trained midwife, but as male it’s difficult to find employment. Instead he now has his own business: he delivers medicine to remote areas. Right now there is not enough work, but if there was, he could imagine hiring member of the refugee community.
+      .third
+        .image= image_tag "person_2.jpg", class: 'auto_fit_image'
+        .content Wuoi lost his cows and income when he escaped South Sudan with his family . They have now lived in Uganda for almost four years. At the beginning, they received food from WFP. Now, he collects once a month $US 47 to feed his family of ten. “When I walk away with the money, I feel free. I like the choice I have now to buy the food we want to eat.”
+      .third
+        .image= image_tag "person_3.jpg", class: 'auto_fit_image'
+        .content Fatuma lives peacefully with her neighbours. However, rare, occasional incidents of hostility from neighbours leave her feeling fearful, vulnerable and unable to protect her family. There is sometimes resentment by nationals who feel that refugees receive preferential treatment.
+    %br
+    .inner_container
+      .third
+        .image= image_tag "person_4.jpg", class: 'auto_fit_image'
+        .content Aisha and the children now live in a new mud hut she built from grass and mud bricks. “I’m just dreaming that my children will find a way to study and that I can feed them. Back in Uganda she used to work as a ????????????????
+      .third
+        .image= image_tag "person_5.jpg", class: 'auto_fit_image'
+        .content Verona has always lived with her family in Arua. She does farming, but only to produce enough to feed her family. Since recently, she also has a business: a small Diesel generator produced electricity – people come to charge their mobiles, especially people from the refugee community. For them it’s important to stay in touch with family.
+      .third
+        .image= image_tag "person_6.jpg", class: 'auto_fit_image'
+        .content Kwizera used to be a police reservist and farmed cassava and maize for his family to eat and to sell, to help his meagre income stretch a little further each month. Since in Uganda he learned to grow rice and was offered a small loan to buy seeds: “Growing rice has enabled my family to purchase a motorcycle that I use to carry passengers.”
+
+.container
+  =render partial: "cta_buttons"

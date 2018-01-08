@@ -4,3 +4,12 @@
   .half.align_right
     =link_to 'https://www.giz.de', target: '_blank' do
       =image_tag('giz-logo')
+%nav
+  .container
+    .full_width
+      = link_to t('buttons.browse_solution'), :solutions, id: 'view_all_btn'
+      = link_to t('buttons.submit_solution'), :new_user_registration, id: 'view_all_btn'
+      - if current_user
+        = button_to t('buttons.log_out'), :destroy_user_session, method: :delete
+      -else
+        = link_to t('buttons.log_in'), :new_user_session

@@ -1,16 +1,28 @@
 h1, h2, h3 ,h4 {
-  font-weight: 600;
   font-size: 20px;
   line-height: 28px;
+  font-family: $condensed-font-family;
+  font-weight: 600;
+  color: $primary-color;
+  text-transform: uppercase;
   @include desktop {
     font-size: 28px;
     line-height: 38px;
   }
 }
 
+h1 {
+  font-size: 30px;
+  line-height: 40px;
+}
+
 
 .grey_block {
   background-color: $light-gray;
+}
+.red_block {
+  background-color: $primary-color;
+  color: $white;
 }
 
 .thinner, .extra_thinner {
@@ -37,4 +49,13 @@ h1, h2, h3 ,h4 {
 
 .normal {
   font-weight: 400;
+}
+
+.red_title {
+  font-size: 120%;
+  font-family: $condensed-font-family;
+  font-weight: 600;
+  color: $primary-color;
+  text-transform: uppercase;
+  margin-bottom: 5px;
 }

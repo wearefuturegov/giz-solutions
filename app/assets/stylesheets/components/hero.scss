@@ -1,0 +1,42 @@
+.hero {
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  position: relative;
+
+  img {
+    width: 100%;
+    @include mobile {
+      max-width: none;
+      width: auto;
+      height: 100%;
+      right: 0;
+    }
+  }
+  h1, h2 {
+    color: $white;
+  }
+  h2 {
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+  .hero_overlay {
+    position: absolute;
+    color: $white;
+    bottom: 5px;
+    width: 100%;
+    .container {
+      padding: 15px;
+    }
+  }
+
+  @include tablet {
+    height: 420px;
+  }
+  @include desktop {
+    height: 600px;
+    img {
+      transform: translateY(-10%);
+    }
+  }
+}
