@@ -2,9 +2,9 @@
   .full_width
     .thinner
       .actions
-        - if current_user&.admin?
-          = button_to 'Archive', solution_path(solution), method: :delete
-        -elsif solution == current_user&.solution
+        - if admin_logged_in
+          = render partial: 'admin_buttons'
+        - if can_edit_solution
           = link_to 'edit', edit_solution_path(solution), class: 'button'
 
       .solution_image

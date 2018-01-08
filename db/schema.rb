@@ -10,10 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171208165100) do
+ActiveRecord::Schema.define(version: 20171213175158) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "application_states", force: :cascade do |t|
+    t.integer "state", default: 0
+  end
 
   create_table "solutions", force: :cascade do |t|
     t.string "embedded_video_url"
@@ -31,6 +35,7 @@ ActiveRecord::Schema.define(version: 20171208165100) do
     t.integer "hero_image_file_size"
     t.datetime "hero_image_updated_at"
     t.datetime "deleted_at"
+    t.boolean "winner", default: false
     t.index ["deleted_at"], name: "index_solutions_on_deleted_at"
     t.index ["user_id"], name: "index_solutions_on_user_id"
   end

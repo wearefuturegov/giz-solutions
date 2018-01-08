@@ -12,4 +12,6 @@ class Solution < ApplicationRecord
                     default_url: ''
 
   validates_attachment_content_type :hero_image, content_type: %r{\Aimage\/.*\z}
+
+  scope :winners, -> { where(winner: true) }
 end

@@ -2,6 +2,9 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+  flash:
+    errors:
+      not_authorised: 'You are not permitted to perform this action. Please try logging in again.'
   strapline: "Building on Innovation"
   buttons:
     submit_solution: "Submit Your Solution"
@@ -9,7 +12,16 @@ en:
     view_all: "View all solutions"
     log_out: "Log out"
     log_in: "Log In"
-    sign_up: "Sign up to create your submission"
+    sign_up_create: "Sign up to create your submission"
+    admin: "Admin"
+    announce_winners: "Anounce winners"
+    continue_collection: "Continue accepting submissions"
+    continue_judging: "Reselect winners"
+    deselect_winner: 'Deselect winner'
+    select_winner: 'Select winner'
+    archive: 'Archive'
+    judging: "Start judging"
+    sign_up: "Sign Up"
     go_home: "Find out more"
     save: "Save Solution"
   home:
@@ -22,7 +34,17 @@ en:
   solution:
     create: "Create Your Solution"
     edit: "Edit Your Solution"
+    judging:
+      title: 'The submissions are currently being Judge and a winner will be selected soon'
+    winners:
+      title: 'The winners were:'
+    others:
+      title: 'Other solutions submitted'
+    so_far:
+      title: 'Solutions submitted so far'
+    deleted:
+      title: 'These solutions have been archived'
+    none:
+      title: 'No Solutions have been published yet'
     all:
-      title: "Solutions submitted so far"
-      deleted_title: "These solutions have been archived"
-      none: "No Solutions have been published yet"
+      title: "Solutions submitted"

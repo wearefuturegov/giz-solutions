@@ -51,7 +51,7 @@ module GizSolutions
     config.encoding = 'utf-8'
 
     # Configure sensitive parameters which will be filtered from the log file.
-    config.filter_parameters += [:password]
+    config.filter_parameters += [:password, :email]
 
     # Enable escaping HTML in JSON.
     config.active_support.escape_html_entities_in_json = true
@@ -80,7 +80,7 @@ module GizSolutions
     s3_conf = {
       access_key_id: ENV['AWS_ACCESS_KEY_ID'],
       secret_access_key: ENV['AWS_SECRET_ACCESS_KEY'],
-      bucket: ENV.fetch('S3_BUCKET_NAME')
+      bucket: ENV['S3_BUCKET_NAME']
     }
 
     config.paperclip_defaults = {
