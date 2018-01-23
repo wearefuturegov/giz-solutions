@@ -6,9 +6,6 @@ class SolutionsController < ApplicationController
   before_action :authenticate_can_edit!, only: %i[update edit]
 
   expose :solution
-  expose :new_solution, lambda {
-    Solution.new(solution_params.merge!(user: current_user))
-  }
 
   expose :winning_solutions, -> { Solution.winners }
   expose :solutions, lambda {
@@ -39,12 +36,13 @@ class SolutionsController < ApplicationController
   end
 
   def create
-    if new_solution.save
+    solution.user = current_user
+    if solution.save
       SolutionMailer.notify_admins(
-        User.admins.collect(&:email), new_solution
+        User.admins.collect(&:email), solution
       ).deliver_now
       flash[:success] = 'Your solution has been created'
-      redirect_to solution_path(new_solution)
+      redirect_to solution_path(solution)
     else
       render :new
     end
