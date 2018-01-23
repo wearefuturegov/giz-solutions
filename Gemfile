@@ -29,8 +29,8 @@ gem 'pg'
 gem 'puma'
 # gem 'rails_service_check', git: 'https://github.com/wearefuturegov/rails_service_check'
 
-gem 'aws-sdk', '~> 2.3'
-gem 'paperclip'
+gem 'aws-sdk'
+gem 'paperclip', git: 'https://github.com/thoughtbot/paperclip', branch: 'jy-no-uri-adapters'
 
 gem 'paranoia'
 
