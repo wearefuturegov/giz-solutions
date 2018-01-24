@@ -1,5 +1,8 @@
 = form.error_notification
 
+-if form.object.new_record?
+  = form.input :terms_accepted, as: :boolean, required: true, label: "Please read and accept the #{link_to('Terms and Conditions', terms_path)} before submitting your solution".html_safe
+
 = form.input :hero_image, as: :file, label: 'Upload new photo'
 
 =form.input :description, as: :text, label: 'Describe your solution:', input_html: { maxlength: 500 }

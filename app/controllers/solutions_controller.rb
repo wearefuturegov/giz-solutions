@@ -69,6 +69,7 @@ class SolutionsController < ApplicationController
   def solution_params
     params.require(:solution).permit(
       :title,
+      :terms_accepted,
       :description,
       :business_opportunities,
       :skills_experience,
