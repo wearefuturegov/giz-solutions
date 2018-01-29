@@ -30,7 +30,7 @@ gem 'puma'
 # gem 'rails_service_check', git: 'https://github.com/wearefuturegov/rails_service_check'
 
 gem 'aws-sdk'
-gem 'paperclip', git: 'https://github.com/thoughtbot/paperclip', branch: 'jy-no-uri-adapters'
+gem 'paperclip'
 
 gem 'paranoia'
 

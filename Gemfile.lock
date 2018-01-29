@@ -1,16 +1,4 @@
 GIT
-  remote: https://github.com/thoughtbot/paperclip
-  revision: dde37e74be798cbf9540d39d50a7785b3b7fde4f
-  branch: jy-no-uri-adapters
-  specs:
-    paperclip (5.1.0)
-      activemodel (>= 4.2.0)
-      activesupport (>= 4.2.0)
-      cocaine (~> 0.5.5)
-      mime-types
-      mimemagic (~> 0.3.0)
-
-GIT
   remote: https://github.com/wearefuturegov/geff.git
   revision: c6802a81c1ea25846902f86acaf8022940aaf9dd
   specs:
@@ -149,7 +137,7 @@ GEM
     mimemagic (0.3.2)
     mini_mime (1.0.0)
     mini_portile2 (2.3.0)
-    minitest (5.11.1)
+    minitest (5.11.3)
     mountain_view (0.12.3)
       rails (>= 3.2.0)
     neat (2.1.0)
@@ -159,6 +147,12 @@ GEM
     nokogiri (1.8.1)
       mini_portile2 (~> 2.3.0)
     orm_adapter (0.5.0)
+    paperclip (5.2.1)
+      activemodel (>= 4.2.0)
+      activesupport (>= 4.2.0)
+      cocaine (~> 0.5.5)
+      mime-types
+      mimemagic (~> 0.3.0)
     parallel (1.12.1)
     paranoia (2.4.0)
       activerecord (>= 4.0, < 5.2)
@@ -272,7 +266,7 @@ DEPENDENCIES
   geff!
   haml-rails
   jquery-rails
-  paperclip!
+  paperclip
   paranoia
   pg
   puma
