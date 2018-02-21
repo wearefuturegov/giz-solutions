@@ -41,6 +41,7 @@ group :development do
   gem 'bullet'
   gem 'byebug'
   gem 'rubocop', require: false
+  gem 'capistrano-futuregov', git: 'git@github.com:wearefuturegov/capistrano-futuregov.git', require: false
 end
 
 # IF HEROKU
