@@ -12,7 +12,8 @@
       -else
         %h3=t('solution.all.none')
         .large_cta.full_width.center
-          =link_to t('buttons.submit_solution'), :new_user_registration, class: 'button'
+          = link_to t('buttons.submit_solution'), current_user ? :new_solution :new_user_registration, id: 'submit_nav'
+
           =link_to t('buttons.go_home'), :root, class: 'button secondary'
 
       - if deleted_solutions.present?
