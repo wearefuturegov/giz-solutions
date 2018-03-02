@@ -6,7 +6,6 @@ class SolutionsController < ApplicationController
   before_action :authenticate_can_edit!, only: %i[update edit]
 
   expose :solution
-
   expose :winning_solutions, -> { Solution.winners }
   expose :solutions, lambda {
     if ApplicationState.instance.announce_winners?

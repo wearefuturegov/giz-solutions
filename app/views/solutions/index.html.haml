@@ -17,5 +17,5 @@
           =link_to t('buttons.go_home'), :root, class: 'button secondary'
 
       - if deleted_solutions.present?
-        %h3=t('solution.all.deleted_title')
+        %h3=t('solution.deleted.title')
         = render partial: 'deleted_solution', collection: deleted_solutions
