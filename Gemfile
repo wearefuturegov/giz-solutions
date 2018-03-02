@@ -24,7 +24,7 @@ gem 'dotenv-rails'
 gem 'ffaker'
 
 # DB and app server
-gem 'appsignal'
+# gem 'appsignal'
 gem 'pg'
 gem 'puma'
 # gem 'rails_service_check', git: 'https://github.com/wearefuturegov/rails_service_check'
