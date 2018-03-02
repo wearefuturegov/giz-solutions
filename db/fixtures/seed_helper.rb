@@ -11,6 +11,18 @@ class SeedHelper
     end
   end
 
+  def populate_df_admins(admins)
+    admins.each do |attrs|
+      user = User.find_or_initialize_by(attrs.merge!(
+            admin: true,
+            organisation: 'Futuregov'
+      ))
+      user.confirmed_at ||= Time.zone.now
+      user.password = ENV['DEFAULT_PASSWORD'] if user.new_record?
+      user.save!
+    end
+  end
+
   def create_user(email_address)
     User.new(email: email_address,
              first_name: FFaker::Name.first_name,
