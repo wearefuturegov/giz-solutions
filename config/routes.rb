@@ -6,6 +6,8 @@ GizSolutions::Application.routes.draw do
 
   get 'terms', to: 'pages#terms'
 
+  resources :restore_solutions, only: :update
+
   resources :solutions do
     resource :winners, only: :update
   end

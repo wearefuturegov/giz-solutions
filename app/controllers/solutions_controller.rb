@@ -5,7 +5,9 @@ class SolutionsController < ApplicationController
   before_action :authenticate_admin!, only: :destroy
   before_action :authenticate_can_edit!, only: %i[update edit]
 
-  expose :solution
+  before_action :authenticate_can_show_archived!, only: %i[show]
+
+  expose :solution, scope: :with_deleted
   expose :winning_solutions, -> { Solution.winners }
   expose :solutions, lambda {
     if ApplicationState.instance.announce_winners?
@@ -30,8 +32,12 @@ class SolutionsController < ApplicationController
   def new; end
 
   def destroy
-    solution.delete
-    redirect_to :solutions
+    if solution.delete
+      flash[:success] = 'The solution has been archived and no longer viewable by the public'
+    else
+      flash[:error] = "We're sorry, but something went wrong."
+    end
+    redirect_to solution_path(solution)
   end
 
   def create
@@ -59,6 +65,12 @@ class SolutionsController < ApplicationController
   end
 
   private
+
+  def authenticate_can_show_archived!
+    return unless solution.deleted?
+    return if admin_logged_in
+    not_authorised
+  end
 
   def authenticate_can_edit!
     return if can_edit_solution

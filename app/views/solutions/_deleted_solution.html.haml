@@ -1,5 +1,5 @@
 .solution_image.small.deleted
-  / =link_to solution_path(deleted_solution) do
-  = image_tag deleted_solution.hero_image.url(:medium)
-  .solution_content
-    =deleted_solution.title
+  =link_to solution_path(deleted_solution) do
+    = image_tag deleted_solution.hero_image.url(:medium)
+    .solution_content
+      =deleted_solution.title

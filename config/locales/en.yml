@@ -25,6 +25,7 @@ en:
     deselect_winner: 'Deselect winner'
     select_winner: 'Select winner'
     archive: 'Archive'
+    restore: 'Restore'
     judging: "Start judging"
     sign_up: "Sign Up"
     go_home: "Find out more"
