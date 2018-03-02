@@ -7,7 +7,7 @@ class User < ApplicationRecord
          :confirmable, :recoverable, :rememberable, :trackable,
          :validatable
 
-  has_one :solution, dependent: :destroy
+  has_one :solution
 
   validates :first_name, :last_name, presence: true
 
