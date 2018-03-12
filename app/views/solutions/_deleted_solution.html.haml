@@ -1,5 +1,6 @@
-.solution_image.small.deleted
+.single_solution.third.deleted
   =link_to solution_path(deleted_solution) do
-    = image_tag deleted_solution.hero_image.url(:medium)
+    .solution_image
+      = image_tag deleted_solution.hero_image.url(:medium)
     .solution_content
       =deleted_solution.title

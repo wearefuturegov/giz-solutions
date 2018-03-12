@@ -1,14 +1,15 @@
 .container
   .full_width
 
-    %h3 The winners should have been chosen as the judging has been marked as over
+    %h3 The winners have been chosen
 
     -if winning_solutions.any?
-      = render partial: 'solutions/solution', collection: winning_solutions
+      #all_solutions.inner_container
+        = render partial: 'solutions/solution', collection: winning_solutions
 
     -else
       %p No winners selected so far
 
-    %p Do you need make an ammendment to continue judging?
+    %p Do you need make an ammendment or to continue judging?
 
     =button_to I18n.t('buttons.continue_judging'), application_state_path(state: ApplicationState.states['judging']), method: :put

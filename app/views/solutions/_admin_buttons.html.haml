@@ -1,7 +1,7 @@
 - unless solution.winner?
-  = button_to I18n.t('buttons.restore'), restore_solution_path(solution), method: :put if solution.deleted?
-  = button_to I18n.t('buttons.archive'), solution_path(solution), method: :delete if solution.deleted_at.nil?
+  = button_to I18n.t('buttons.restore'), restore_solution_path(solution), class: "button", method: :put if solution.deleted?
+  = button_to I18n.t('buttons.archive'), solution_path(solution), class: "button", method: :delete if solution.deleted_at.nil?
 
 - if ApplicationState.instance.judging?
-  = button_to I18n.t('buttons.deselect_winner'), solution_winners_path(solution), method: :put, remote: true if solution.winner?
-  = button_to I18n.t('buttons.select_winner'), solution_winners_path(solution), method: :put, remote: true unless solution.winner?
+  = button_to I18n.t('buttons.deselect_winner'), solution_winners_path(solution), class: "button", method: :put, remote: true if solution.winner?
+  = button_to I18n.t('buttons.select_winner'), solution_winners_path(solution), class: "button", method: :put, remote: true unless solution.winner?

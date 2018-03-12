@@ -46,7 +46,7 @@ en:
     judging:
       title: 'The submissions are currently being Judge and a winner will be selected soon'
     winners:
-      title: 'The winners were:'
+      title: 'The winners were'
     others:
       title: 'Other solutions submitted'
     so_far:

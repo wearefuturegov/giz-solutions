@@ -3,7 +3,8 @@
     .thinner
       - if ApplicationState.instance.announce_winners?
         %h3=t('solution.winners.title')
-        = render partial: 'solutions/solution', collection: winning_solutions
+        #all_solutions.inner_container
+          = render partial: 'solutions/solution', collection: winning_solutions
 
       - if solutions.any?
         %h3= solutions_title
@@ -18,4 +19,5 @@
 
       - if deleted_solutions.present?
         %h3=t('solution.deleted.title')
-        = render partial: 'deleted_solution', collection: deleted_solutions
+        #all_solutions.inner_container
+          = render partial: 'deleted_solution', collection: deleted_solutions

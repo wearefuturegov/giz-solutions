@@ -3,7 +3,7 @@
 }
 
 .solution_content {
-  min-height: 93px;
+  height: 100px;
 }
 
 .solution_image {
@@ -19,5 +19,15 @@
   }
   h1 {
     margin-bottom: 0;
+  }
+}
+
+.solution_actions {
+  margin-bottom: 25px;
+  .button_to {
+    display: inline-block;
+  }
+  .button {
+    margin-right: 10px;
   }
 }
