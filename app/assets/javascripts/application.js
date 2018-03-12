@@ -16,5 +16,6 @@
 //= require char-limit
 //= require solutions
 //= require geff/auto-fit-image
+//= require geff/accordion
 //
 //= require public

@@ -16,6 +16,8 @@ $(document).ready(function() {
   $('body').smoothScroll(750);
 
   $('.single_solution').solutions();
+
+  $('.accordion').each(function() { $(this).accordion() });
 });
 
 $(window).load(function() {
