@@ -17,3 +17,11 @@
     display: block;
   }
 }
+
+.unstyle_button {
+  background-color: transparent;
+  line-height: 25px;
+  &:hover {
+    background-color: transparent;
+  }
+}
