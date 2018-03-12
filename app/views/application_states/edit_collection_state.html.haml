@@ -2,6 +2,8 @@
   .full_width
     %h3 Is it time to start judging the solution submissions?
 
-    = button_to I18n.t('buttons.judging'), application_state_path(state: ApplicationState.states['judging']), method: :put
+    %p
+      %span.bold Once this is executed user will no longer be able to submit more solutions.
+      The option to submit will be hidden while you select three winners. You can revert this feature by clicking 'continue accepting submissions' after.
 
-    %p Once this is executed user will no longer be able to submit more solutions. The option to submit will be hidden while you select three winners.
+    = button_to I18n.t('buttons.judging'), application_state_path(state: ApplicationState.states['judging']), method: :put
