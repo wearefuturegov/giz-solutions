@@ -3,7 +3,7 @@
 -if form.object.new_record?
   = form.input :terms_accepted, as: :boolean, required: true, label: "Please read and accept the #{link_to('Terms and Conditions', terms_path)} before submitting your solution".html_safe
 
-= form.input :hero_image, as: :file, label: 'Upload new photo'
+= form.input :hero_image, as: :file, label: 'Upload a banner photo for your solution', hint: 'Choose a photo for your solution. Good photos will be at least 1024 pixels wide and 450 pixels tall, but no larger than 5MB.'
 
 =form.input :description, as: :text, label: 'Describe your solution:', input_html: { maxlength: 500 }
 
