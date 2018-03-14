@@ -49,7 +49,64 @@
 
 .container
   .full_width
-    %hr
+    %h2 When things are happening
+    .timeline
+      .top_section
+        .time_section{:class => ("active" if ApplicationState.instance.state == 'collection')}
+          %span Application
+        .time_section{:class => ("active" if ApplicationState.instance.state == 'judging')}
+          %span Selection of winners
+        .time_section{:class => ("active" if ApplicationState.instance.state == 'announce_winners')}
+          %span Announcement
+        .time_section.small_sec
+          %span Lab in Rwanda
+        .time_section.final_sec
+          %span Remote advice during prototype
+      .timeline_line
+        .time_section{:class => ("active" if ApplicationState.instance.state == 'collection')}
+        .time_section{:class => ("active" if ApplicationState.instance.state == 'judging')}
+        .time_section{:class => ("active" if ApplicationState.instance.state == 'announce_winners')}
+        .time_section.small_sec
+        .time_section.final_sec
+      .bottom_section
+        .time_section
+          .date
+            %span May
+            %span 24
+        .time_section
+          .date
+            %span Jun
+            %span 24
+        .time_section
+          .date
+            %span Jul
+            %span 16
+        .time_section.small_sec
+          .date
+            %span Sep
+            %span 24
+        .time_section.final_sec
+          .date
+            %span Oct
+            %span 01
+          .date.final_date
+            %span Oct
+            %span 16
+
+
+
+%br
+%br
+%br
+%br
+%br
+%br
+%br
+%br
+
+/ .container
+/   .full_width
+/     %hr
 
 #meet_community.container
   .full_width
