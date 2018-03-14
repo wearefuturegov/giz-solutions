@@ -1,8 +1,7 @@
 .container
   .third
     %ul
-      %li Registration information
-      %li Data Protection
-      %li Sitemap
+      %li.button Registration information
+      %li.button Data Protection
       %li=link_to 'Legal Information', terms_path, class: 'button'
       %li= link_to I18n.t('buttons.twitter'), I18n.t('buttons.url.twitter', root_url: root_url), class: 'button'
