@@ -90,24 +90,32 @@
 
 .container
   .full_width
+    %h3 What good looks like
+    %p.bold A jury – including members from GIZ, other leading organisations and possible users - will select the three best ideas. A good idea follows these principals:
+
     .accordion
-      %h3 What good looks like
-
-      .inner_container
-        .full_width
-          %p.bold A jury – including members from GIZ, other leading organisations and possible users - will select the three best ideas. A good idea follows these principals:
-
-        .half
-          %p.bold.red Potential to scale.
+      .accord-single
+        .accord-toggle
+          .bold.red
+            =fa_icon "plus-circle"
+            Potential to scale.
+        .accord-cont
           %p We picked Rwanda as an exemplar. Similar challenges exist in other countries like Jordan, Tanzania or Iraq. We are looking for ideas that have the potential to scale, first in Rwanda than beyond.
-
-        .half
-          %p.bold.red Creating a benefit for refugee and host.
+      .accord-single
+        .accord-toggle
+          .bold.red
+            =fa_icon "plus-circle"
+            Creating a benefit for refugee and host.
+        .accord-cont
           %p We are looking for solutions that are not only focused on supporting refugees, but also provide a benefit to members of host communities.
-
-        .half
-          %p.bold.red Strengthening relationships.
+      .accord-single
+        .accord-toggle
+          .bold.red
+            =fa_icon "plus-circle"
+            Strengthening relationships.
+        .accord-cont
           %p We are looking for solutions that provide members of both communities opportunities to meet, collaborate and get to know each other.
+
 
 .container.small_break
   .full_width
