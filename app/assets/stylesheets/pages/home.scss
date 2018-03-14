@@ -48,13 +48,25 @@
   }
 }
 
-#home_intro {
+.home {
   .accordion {
     .accord-toggle {
-      margin-bottom: 7px;
+      margin-bottom: 10px;
+      opacity: 0.7;
+      &:hover {
+        opacity: 1;
+      }
+    }
+    .accord-cont {
+      padding-top: 5px;
     }
     .low_margin {
       margin-bottom: 1px;
+    }
+  }
+  .open {
+    .accord-toggle {
+      opacity: 1;
     }
   }
 }
