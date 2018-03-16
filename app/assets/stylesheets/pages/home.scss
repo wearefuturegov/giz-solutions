@@ -70,3 +70,11 @@
     }
   }
 }
+
+#meet_community, #meet_rwanda {
+  .third {
+    @include mob_tab {
+      margin-bottom: 25px;
+    }
+  }
+}

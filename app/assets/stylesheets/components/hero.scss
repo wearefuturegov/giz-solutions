@@ -1,42 +1,55 @@
 .hero {
   width: 100%;
-  height: 350px;
   overflow: hidden;
   position: relative;
 
   img {
     width: 100%;
-    @include mobile {
-      max-width: none;
-      width: auto;
-      height: 100%;
-      right: 0;
+    @include mob_tab {
+      width: 100%;
+      height: auto;
     }
   }
   h1, h2 {
-    color: $white;
+    color: $black;
+    font-size: 38px;
+    @include mob_tab {
+      font-size: 30px;
+    }
   }
   h2 {
-    font-weight: 500;
+    font-weight: 400;
     margin-bottom: 5px;
+    font-size: 20px;
   }
   .hero_overlay {
     position: absolute;
-    color: $white;
-    bottom: 5px;
-    width: 100%;
+    color: $black;
+    bottom: 50px;
+    width: 50%;
+    padding: 20px;
+    padding-left: calc(15vw + 14px);
+    background-color: rgba($white, 0.8);
+    h1 {
+      margin-bottom: 0;
+    }
     .container {
       padding: 15px;
     }
+    @include mob_tab {
+      position: static;
+      width: 100%;
+      padding: 20px;
+    }
   }
 
-  @include tablet {
-    height: 420px;
-  }
   @include desktop {
     height: 600px;
     img {
       transform: translateY(-10%);
     }
+  }
+  @include mob_tab {
+    height: auto;
   }
 }

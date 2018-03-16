@@ -1,3 +1,6 @@
+// @import url('https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,500,500i,600');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i');
+
 @font-face {
   font-family: 'GravurCodensed-Regular';
   src:url('fonts/GravurCodensed-Regular.woff');
@@ -24,5 +27,6 @@ $light-gray: #eceded;
 
 $base-border-radius: 0;
 
+// $base-font-family: 'EB Garamond', $font-stack-system;
 $base-font-family: 'Open Sans', $font-stack-system;
 $condensed-font-family: 'GravurCodensed-Regular', sans-serif;
