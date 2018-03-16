@@ -94,3 +94,14 @@ h1 {
     }
   }
 }
+
+.two-thirds { // 4 column
+  @include grid-column(12, $mobile_grid);
+
+  @include desktop {
+    @include grid-column(8);
+    &.center {
+      @include grid-push(2);
+    }
+  }
+}
