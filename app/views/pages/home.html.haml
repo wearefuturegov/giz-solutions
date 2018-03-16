@@ -24,28 +24,30 @@
 .hero
   =image_tag("hero1.jpg")
   .hero_overlay
-    .container
-      .full_width
-        %h2 Open call for solutions
-        %h1 How can we strengthen business exchange between refugees and host communities?
+    %h2 Open call for solutions
+    %h1 How can we strengthen business exchange between refugees and host communities?
+
+%br
 
 #home_brief.container
   .half
-    .red_block
-      .brief Your Brief
-      %hr
-      .tagline How can we increase financial independence of refugees through shared business opportunities with their host communities?
-    =render partial: "cta_buttons"
-  .half
+    / .red_block
+    /   .brief Your Brief
+    /   %hr
+    /   .tagline How can we increase financial independence of refugees through shared business opportunities with their host communities?
     .red_title The challenge
     %p Refugees often live in displacement for decades, many will never return to their homes. Therefore is is critical to enable them to become financially independent and build a life on their own – in a way that benefits both the refugees and the communities they now live in.
-
+    =render partial: "cta_buttons"
+  .half
     .red_title The opportunity
 
     %p There is a huge untapped potential to create shared business opportunities for refugees and host communities.
     %p Think of co-working spaces, shared workshops and joint creation of new services – doing business with each other provides an opportunity to meet, reduce prejudices and improve one’s livelihood.
     / %p In Rwanda for example, 21% of refugees own a business that employs other people—and 40% of those employees are Rwandan nationals.
     %p So how can we create more shared business opportunities between both communities?
+
+%br
+%br
 
 .container
   .full_width
@@ -58,6 +60,8 @@
           %span Selection of winners
         .time_section{:class => ("active" if ApplicationState.instance.state == 'announce_winners')}
           %span Announcement
+          %br
+          %span.bold 16th of July
         .time_section.small_sec
           %span Lab in Rwanda
         .time_section.final_sec
@@ -94,6 +98,7 @@
             %span 16
 
 
+%br
 / .container
 /   .full_width
 /     %hr
