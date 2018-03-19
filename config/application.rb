@@ -94,6 +94,6 @@ module GizSolutions
       s3_host_name: 's3-eu-central-1.amazonaws.com'
     }
 
-    config.assets.paths << Rails.root.join("app", "assets", "fonts")
+    # config.assets.paths << Rails.root.join("app", "assets", "fonts")
   end
 end
