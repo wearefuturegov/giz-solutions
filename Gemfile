@@ -24,7 +24,6 @@ gem 'dotenv-rails'
 gem 'ffaker'
 
 # DB and app server
-gem 'appsignal'
 gem 'pg'
 gem 'rails_service_check', git: 'https://github.com/wearefuturegov/rails_service_check'
 
@@ -45,6 +44,7 @@ end
 
 # IF HEROKU
 group :staging do
+  gem 'appsignal'
   gem 'puma'
   gem 'rails_12factor'
 end
