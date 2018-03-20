@@ -16,8 +16,8 @@ SeedHelper.instance.populate_df_admins(
 
     {
       email: 'giz-solutions@wearefuturegov.com',
-      first_name: 'Simone',
-      last_name: 'Carrier'
+      first_name: 'Administrator',
+      last_name: 'FG'
       }
     ]
   )
