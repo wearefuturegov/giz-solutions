@@ -26,7 +26,7 @@ gem 'ffaker'
 # DB and app server
 gem 'appsignal'
 gem 'pg'
-# gem 'rails_service_check', git: 'https://github.com/wearefuturegov/rails_service_check'
+gem 'rails_service_check', git: 'https://github.com/wearefuturegov/rails_service_check'
 
 gem 'aws-sdk'
 gem 'paperclip'
