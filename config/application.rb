@@ -71,6 +71,8 @@ module GizSolutions
     config.secret_key_base = ENV['SECRET_KEY_BASE']
     config.devise_secret_key = ENV['DEVISE_SECRET_KEY']
 
+    config.hostname = ENV.fetch('HOST_URL', 'localhost:3000')
+
     config.action_mailer.default_url_options = {
       host: ENV.fetch('HOST_URL', 'localhost:3000')
     }
