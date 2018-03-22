@@ -70,10 +70,9 @@ module GizSolutions
     config.secret_token = ENV['SECRET_TOKEN']
     config.secret_key_base = ENV['SECRET_KEY_BASE']
     config.devise_secret_key = ENV['DEVISE_SECRET_KEY']
+    config.facebook_id = ENV['FACEBOOK_ID']
 
     config.hostname = ENV.fetch('HOST_URL', 'localhost:3000')
-
-    config.facebook_id = ENV['FACEBOOK_ID']
 
     config.action_mailer.default_url_options = {
       host: config.hostname
