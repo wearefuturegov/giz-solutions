@@ -29,7 +29,10 @@ class CustomDeviseMailer < Devise::Mailer
     sendgrid_mail(
       get_subject(email_type),
       Email.new(email: record.email),
-      get_content("devise/mailer/#{email_type}", token: token, resource: record, email: record.email)
+      get_content(
+        "devise/mailer/#{email_type}",
+        confirmation_link: confirmation_url(@resource, confirmation_token: @token),
+        email: record.email)
     )
   end
 
