@@ -14,8 +14,8 @@ class SeedHelper
   def populate_df_admins(admins)
     admins.each do |attrs|
       user = User.find_or_initialize_by(attrs.merge!(
-            admin: true,
-            organisation: 'Futuregov'
+                                          admin: true,
+                                          organisation: 'Futuregov'
       ))
       user.confirmed_at ||= Time.zone.now
       user.password = ENV['DEFAULT_PASSWORD'] if user.new_record?

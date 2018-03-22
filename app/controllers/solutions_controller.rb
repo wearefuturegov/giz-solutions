@@ -23,7 +23,7 @@ class SolutionsController < ApplicationController
 
   expose :can_edit_solution, lambda {
     ApplicationState.instance.collection? &&
-     (admin_logged_in || current_user&.solution == solution)
+      (admin_logged_in || current_user&.solution == solution)
   }
 
   def show; end

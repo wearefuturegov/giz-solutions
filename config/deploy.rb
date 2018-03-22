@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # include default configuration for futuregov rails apps
 require 'capistrano/futuregov/config'
 
@@ -5,6 +7,6 @@ require 'capistrano/futuregov/config'
 set :slack_channel, '#giz_solutions'
 
 # Verify application is responding after deploy
-set :deploy_verify_url, -> {
-  "giz-solutions.wearefuturegov.com"
+set :deploy_verify_url, lambda {
+  'giz-solutions.wearefuturegov.com'
 }
