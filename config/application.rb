@@ -71,7 +71,9 @@ module GizSolutions
     config.secret_key_base = ENV['SECRET_KEY_BASE']
     config.devise_secret_key = ENV['DEVISE_SECRET_KEY']
 
-    config.action_mailer.default_url_options = { host: 'localhost:3000' }
+    config.action_mailer.default_url_options = {
+      host: ENV.fetch('HOST_URL', 'localhost:3000')
+    }
 
     config.support_email = ENV.fetch('SUPPORT_EMAIL', 'no-reply@example.com')
 
@@ -86,7 +88,7 @@ module GizSolutions
     config.paperclip_defaults = {
       storage: :s3,
       s3_credentials: s3_conf,
-      bucket: s3_conf[:bucket],
+      s3_bucket: s3_conf[:bucket],
       s3_region: 'eu-central-1',
       s3_protocol: 'https',
       path: ':attachment/:id/:style/:basename.:extension',
