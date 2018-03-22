@@ -32,14 +32,16 @@ gem 'paperclip'
 
 gem 'paranoia'
 
+gem 'sendgrid-ruby'
+
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'brakeman', require: false
   gem 'bullet'
   gem 'byebug'
-  gem 'rubocop', require: false
   gem 'capistrano-futuregov', git: 'git@github.com:wearefuturegov/capistrano-futuregov.git', require: false
+  gem 'rubocop', require: false
 end
 
 # IF HEROKU
