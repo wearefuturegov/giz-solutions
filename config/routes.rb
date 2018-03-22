@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 GizSolutions::Application.routes.draw do
+  default_url_options host: GizSolutions.config.hostname
+
   devise_for :users, controllers: { registrations: 'registrations' }
   root to: 'pages#home'
 
