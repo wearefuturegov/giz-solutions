@@ -72,9 +72,9 @@ GizSolutions::Application.configure do
   config.action_mailer.delivery_method = :smtp
 
   config.action_mailer.smtp_settings = {
-     :address => 'localhost',
-     :port => '25',
-     :domain => 'localhost.localdomain',
-     :enable_starttls_auto => false
-   }
+    address: 'localhost',
+    port: '25',
+    domain: 'localhost.localdomain',
+    enable_starttls_auto: false
+  }
 end
