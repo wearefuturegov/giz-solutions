@@ -18,5 +18,4 @@
 //= require geff/auto-fit-image
 //= require geff/accordion
 //
-//= require facebook
 //= require public
