@@ -10,4 +10,25 @@ module ApplicationHelper
       t('solution.others.title')
     end
   end
+
+  def page_title
+    return 'GIZ Solutions' unless solution_show_page
+    solution.title
+  end
+
+  def page_description
+    return '- OPEN CALL FOR SOLUTIONS - How can we strengthen business exchange between refugees and host communities?' unless solution_show_page
+    solution.description
+  end
+
+  def page_og_image
+    return "#{root_url}#{image_path('hero1.jpg')}" unless solution_show_page
+    solution.hero_image.url(:medium)
+  end
+
+  private
+
+  def solution_show_page
+    request.url =~ /solutions\/[\d]*/
+  end
 end

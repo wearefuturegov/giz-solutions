@@ -1,10 +1,18 @@
-%meta{:charset => "utf-8"}
-%meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
+%meta{charset: "utf-8"}
+%meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}
 
-%meta{:content => "yes", :name => "apple-mobile-web-app-capable"}
-%meta{:content => "#000000", :name => "theme-color"}
+%meta{content: "yes", name: "apple-mobile-web-app-capable"}
+%meta{content: "#000000", name: "theme-color"}
 
-%title GizSolutions
+
+/ %meta{:content => GizSolutions.config.facebook_id, :property => "fb:app_id"}
+%meta{content: request.url, property: "og:url"}
+%meta{content: "website", property: "og:type"}
+%meta{content: page_title, property: "og:title"}
+%meta{content: page_description, property: "og:description"}
+%meta{content: page_og_image, property: "og:image"}
+
+%title GIZ Solutions
 
 = favicon_link_tag 'favicon.ico'
 
