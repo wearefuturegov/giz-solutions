@@ -22,7 +22,7 @@ module ApplicationHelper
   end
 
   def page_og_image
-    return "#{root_url}#{image_path('hero1.jpg')}" unless solution_show_page
+    return "#{root_url}#{image_path('person_3.jpg')}" unless solution_show_page
     solution.hero_image.url(:medium)
   end
 
