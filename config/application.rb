@@ -73,6 +73,8 @@ module GizSolutions
 
     config.hostname = ENV.fetch('HOST_URL', 'localhost:3000')
 
+    config.facebook_id = ENV['FACEBOOK_ID']
+
     config.action_mailer.default_url_options = {
       host: config.hostname
     }
@@ -99,5 +101,6 @@ module GizSolutions
     }
 
     # config.assets.paths << Rails.root.join("app", "assets", "fonts")
+    config.assets.precompile += %w( facebook.js )
   end
 end

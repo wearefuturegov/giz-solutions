@@ -1,3 +1,10 @@
+/ Load Facebook SDK for JavaScript
+#fb-root
+- if GizSolutions.config.facebook_id.present?
+  :javascript
+    _FACEBOOK_ID = "#{GizSolutions.config.facebook_id}";
+  = javascript_include_tag "facebook"
+
 .container
   .half
     / %h2=link_to t('strapline'), :root
