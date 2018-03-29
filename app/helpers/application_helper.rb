@@ -26,6 +26,11 @@ module ApplicationHelper
     solution.hero_image.url(:medium)
   end
 
+  def page_og_url
+    return root_url unless solution_show_page
+    request.url
+  end
+
   private
 
   def solution_show_page

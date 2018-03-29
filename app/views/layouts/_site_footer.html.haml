@@ -5,5 +5,6 @@
       %li.button Data Protection
       %li=link_to 'Legal Information', terms_path, class: 'button'
       %li=link_to I18n.t('buttons.twitter'), I18n.t('buttons.url.twitter', root_url: root_url), class: 'button'
-      %li.fb-share-button{"data-href" => "https://developers.facebook.com/docs/plugins/", "data-layout" => "button", "data-mobile-iframe" => "true", "data-size" => "large"}
-        %a.fb-xfbml-parse-ignore{:href => "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&src=sdkpreparse", :target => "_blank"} Share
+
+      %li.fb-share-button{"data-href" => page_og_url, "data-layout" => "button", "data-mobile-iframe" => "true", "data-size" => "large"}
+        %a.fb-xfbml-parse-ignore{:href => "https://www.facebook.com/sharer/sharer.php?u=#{page_og_url}&src=sdkpreparse", :target => "_blank"} Share
