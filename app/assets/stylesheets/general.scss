@@ -1,18 +1,18 @@
 h1, h2, h3 ,h4 {
-  font-size: 20px;
+  font-size: 24px;
   line-height: 28px;
   font-family: $condensed-font-family;
   font-weight: 600;
-  color: $primary-color;
+  // color: $primary-color;
   text-transform: uppercase;
   @include desktop {
-    font-size: 28px;
+    font-size: 29px;
     line-height: 38px;
   }
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 33px;
   line-height: 40px;
 }
 
@@ -51,11 +51,11 @@ h1 {
   font-weight: 400;
 }
 
-.red_title {
-  font-size: 120%;
+.sub_title {
+  font-size: 135%;
   font-family: $condensed-font-family;
   font-weight: 600;
-  color: $primary-color;
+  // color: $primary-color;
   text-transform: uppercase;
   margin-bottom: 5px;
 }
