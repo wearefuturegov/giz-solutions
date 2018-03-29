@@ -1,6 +1,10 @@
 %p
-  Welcome #{@resource.name}!
-%p You can confirm your account email through the link below:
+  Welcome #{@resource.name},
+%p Thank you for joining us! Complete your account registration by clicking the link below.
 %p= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token)
+
+%br
+%p We can’t wait to receive your submission!
+%p The GIZ solutions team
 
 = render partial: 'shared/email_signature'
