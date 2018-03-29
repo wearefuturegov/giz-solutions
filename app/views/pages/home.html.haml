@@ -73,9 +73,9 @@
       .timeline_line
         .time_section{:class => ("active" if ApplicationState.instance.state == 'collection')}
         .time_section{:class => ("active" if ApplicationState.instance.state == 'judging')}
-        .time_section{:class => ("active" if ApplicationState.instance.state == 'announce_winners')}
-        .time_section.small_sec
-        .time_section.final_sec
+        .time_section{:class => ("active" if ApplicationState.instance.state == 'announce_winners' && DateTime.new(2018,9,24).future?)}
+        .time_section.small_sec{:class => ("active" if DateTime.new(2018,9,24).past? && DateTime.new(2018,10,1).future?)}
+        .time_section.final_sec{:class => ("active" if DateTime.new(2018,10,1).past?)}
       .bottom_section
         .time_section
           .date
