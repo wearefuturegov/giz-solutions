@@ -49,6 +49,11 @@
 %br
 
 .container
+  %h2=t('solution.winners.title')
+  #all_solutions.inner_container
+    = render partial: 'solutions/solution', collection: winning_solutions
+
+.container
   .full_width
     %h2 When things are happening
     .timeline
