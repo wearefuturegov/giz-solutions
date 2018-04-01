@@ -97,7 +97,7 @@ GEM
     bullet (5.7.3)
       activesupport (>= 3.0.0)
       uniform_notifier (~> 1.11.0)
-    byebug (9.1.0)
+    byebug (10.0.2)
     capistrano (3.4.1)
       i18n
       rake (>= 10.0.0)
