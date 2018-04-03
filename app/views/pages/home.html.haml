@@ -48,10 +48,11 @@
 %br
 %br
 
-.container
-  %h2=t('solution.winners.title')
-  #all_solutions.inner_container
-    = render partial: 'solutions/solution', collection: winning_solutions
+-if ApplicationState.instance.announce_winners?
+  .container
+    %h2=t('solution.winners.title')
+    #all_solutions.inner_container
+      = render partial: 'solutions/solution', collection: winning_solutions
 
 .container
   .full_width
