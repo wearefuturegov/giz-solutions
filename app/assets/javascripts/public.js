@@ -17,7 +17,9 @@ $(document).ready(function() {
 
   $('.single_solution').solutions();
 
-  $('.accordion').each(function() { $(this).accordion() });
+  $('.accordion').each(function() { $(this).accordion(); });
+
+  $('.sticky_cont').sticky();
 });
 
 $(window).load(function() {

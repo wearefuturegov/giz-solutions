@@ -15,6 +15,7 @@
 //= require geff/smooth-scroll
 //= require char-limit
 //= require solutions
+//= require geff/sticky
 //= require geff/auto-fit-image
 //= require geff/accordion
 //
