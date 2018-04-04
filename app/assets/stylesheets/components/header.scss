@@ -11,6 +11,13 @@ header {
     font-family: $condensed-font-family;
     margin-bottom: 0;
     font-weight: 600;
+    margin-top: 6px;
+  }
+  @include mob_tab {
+    text-align: center;
+    .align_right {
+      text-align: center;
+    }
   }
 }
 

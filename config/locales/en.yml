@@ -9,7 +9,7 @@ en:
   flash:
     errors:
       not_authorised: 'You are not permitted to perform this action. Please try logging in again.'
-  strapline: "Building on Innovation"
+  strapline: "GIZ Solutions"
   buttons:
     overview: "Overview"
     submit_solution: "Submit Your Solution"
