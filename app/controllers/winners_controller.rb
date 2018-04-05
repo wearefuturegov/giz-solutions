@@ -6,7 +6,7 @@ class WinnersController < ApplicationController
   expose :solution
 
   def update
-    solution.update_attributes(winner: !solution.winner)
+    solution.update(winner: !solution.winner)
     redirect_back(fallback_location: solution_path(solution))
   end
 end

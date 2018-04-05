@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require File.expand_path('../boot', __FILE__)
+require File.expand_path('boot', __dir__)
 
 require 'rails/all'
 require 'mountain_view'
@@ -101,6 +101,6 @@ module GizSolutions
     }
 
     # config.assets.paths << Rails.root.join("app", "assets", "fonts")
-    config.assets.precompile += %w( facebook.js )
+    config.assets.precompile += %w[facebook.js]
   end
 end

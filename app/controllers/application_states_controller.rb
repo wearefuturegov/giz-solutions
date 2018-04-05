@@ -10,7 +10,7 @@ class ApplicationStatesController < ApplicationController
   end
 
   def update
-    ApplicationState.instance.update_attributes(
+    ApplicationState.instance.update(
       state: application_state_params[:state].to_i
     )
     redirect_to :edit_application_state

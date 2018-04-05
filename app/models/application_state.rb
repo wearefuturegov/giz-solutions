@@ -4,6 +4,6 @@ class ApplicationState < ApplicationRecord
   enum state: %i[collection judging announce_winners]
 
   def self.instance
-    first
+    first || ApplicationState.create
   end
 end
