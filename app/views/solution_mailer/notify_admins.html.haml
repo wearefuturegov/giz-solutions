@@ -10,4 +10,6 @@
 
 %br
 = render partial: 'shared/email_signature'
-=content_tag(:asm_global_unsubscribe_url)
+= link_to 'Unsubscribe from all emails', "%asm_global_unsubscribe_raw_url%"
+= content_tag('%asm_global_unsubscribe_url%')
+
