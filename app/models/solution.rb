@@ -17,5 +17,9 @@ class Solution < ApplicationRecord
 
   validates_attachment_content_type :hero_image, content_type: %r{\Aimage\/.*\z}
 
+  validates :hero_image, attachment_presence: true
+  validates_with AttachmentPresenceValidator, attributes: :hero_image
+  validates_with AttachmentSizeValidator, attributes: :hero_image, less_than: 5.megabytes
+
   scope :winners, -> { where(winner: true) }
 end
