@@ -4,11 +4,11 @@ class CustomDeviseMailer < Devise::Mailer
   include SendGridMailer
 
   def confirmation_instructions(record, token, _opts = {})
-    sendgrid_devise_mail(:confirmation_instructions, record, token)
+    sendgrid_devise_mail(:confirmation_instructions, record, user_confirmation_url(record, confirmation_token: token))
   end
 
   def reset_password_instructions(record, token, _opts = {})
-    sendgrid_devise_mail(:reset_password_instructions, record, token)
+    sendgrid_devise_mail(:reset_password_instructions, record, edit_user_password_url(record, reset_password_token: token))
   end
 
   # def unlock_instructions(record, token, opts={})
@@ -25,14 +25,14 @@ class CustomDeviseMailer < Devise::Mailer
 
   private
 
-  def sendgrid_devise_mail(email_type, record, token = nil)
+  def sendgrid_devise_mail(email_type, record, devise_link=nil)
     sendgrid_mail(
       get_subject(email_type),
-      Email.new(email: record.email),
+      Email.new(email: "#{record.name} <#{record.email}>"),
       get_content(
         "devise/mailer/#{email_type}",
-        confirmation_link: confirmation_url(@resource, confirmation_token: @token),
-        email: record.email)
+        devise_link: devise_link,
+        name: record.name)
     )
   end
 
