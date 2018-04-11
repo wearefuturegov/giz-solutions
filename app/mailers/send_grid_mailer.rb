@@ -18,6 +18,8 @@ module SendGridMailer
 
   def sendgrid_mail(subject, to, content)
     mail = Mail.new(from_email, subject, to, content)
+    mail.asm = ASM.new(group_id: 5827)
+    # puts request_body = mail.to_json
     response = sendgrid_client.mail._('send').post(request_body: mail.to_json)
     # puts response.status_code
     # puts response.body
@@ -29,6 +31,6 @@ module SendGridMailer
   end
 
   def from_email
-    Email.new(email: GizSolutions.config.support_email)
+    @from ||= Email.new(email: GizSolutions.config.support_email)
   end
 end
