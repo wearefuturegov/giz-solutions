@@ -34,6 +34,8 @@ gem 'paranoia'
 
 gem 'sendgrid-ruby'
 
+gem 'appsignal'
+
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
@@ -46,7 +48,6 @@ end
 
 # IF HEROKU
 group :staging do
-  gem 'appsignal'
   gem 'puma'
   gem 'rails_12factor'
 end

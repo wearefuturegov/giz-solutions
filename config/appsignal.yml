@@ -2,7 +2,7 @@ default: &defaults
   # Your push api key, it is possible to set this dynamically using ERB:
   push_api_key: "<%= ENV['APPSIGNAL_PUSH_API_KEY'] %>"
   name: "<%= ENV['APPSIGNAL_APP_NAME'] %>"
-  active: false
+  active: true
   ignore_actions:
     - "RailsServiceCheck::ChecksController#all"
     - "GET /service_check"
@@ -10,16 +10,23 @@ default: &defaults
     - password
     - confirm_password
     - email
+  # Enable allocation tracking for memory metrics:
+  enable_allocation_tracking: true
+  # Enable Garbage Collection instrumentation
+  enable_gc_instrumentation: true
+  # Skip session data, it contains private information.
+  skip_session_data: true
 
 # Configuration per environment, leave out an environment or set active
 # to false to not push metrics for that environment.
+test: &test_env
+  active: false
+
 development:
-  <<: *defaults
+  <<: *test_env
 
 staging:
   <<: *defaults
-  active: true
 
 production:
   <<: *defaults
-  active: true
