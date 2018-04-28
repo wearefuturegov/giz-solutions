@@ -27,6 +27,7 @@ en:
     archive: 'Archive'
     restore: 'Restore'
     judging: "Start judging"
+    download_solutions: "Download solutions"
     sign_up: "Sign Up"
     go_home: "Find out more"
     save: "Save Solution"

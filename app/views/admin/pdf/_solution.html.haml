@@ -1,0 +1,32 @@
+#solution_show.container
+  .full_width
+    .thinner
+      .solution_image
+        = image_tag solution.hero_image.url, class: 'auto_fit_image'
+
+      %h1=solution.title
+      %p="by #{solution.user.name}"
+      -if solution.user.organisation
+        ="from #{solution.user.organisation}"
+
+      =link_to solution.website, solution.website, :target => "_blank"
+
+      %hr
+
+      %h2 Our solution
+      %p=solution.description
+
+      %hr
+
+      %h2 How it strengthens relationships through business opportunities
+      %p=solution.business_opportunities
+
+      %hr
+
+      %h2 How has it been implemented and what impact it had
+      %p=solution.implementation_impact
+
+      %hr
+
+      %h2 Our Skills and Experience
+      %p=solution.skills_experience

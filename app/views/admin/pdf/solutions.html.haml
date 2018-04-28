@@ -1,0 +1,9 @@
+.pdf_header= "Date: #{Time.zone.now.to_s(:short)}"
+
+- if @solutions.any?
+  .pdf_solutions
+    %h2 Solutions
+    =render partial: '/admin/pdf/solution', collection: @solutions
+- else
+  .pdf_solutions
+    %h2 No solutions submitted yet
