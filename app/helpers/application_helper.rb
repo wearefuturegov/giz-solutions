@@ -17,7 +17,7 @@ module ApplicationHelper
   end
 
   def page_description
-    return '- OPEN CALL FOR SOLUTIONS - How can we strengthen business exchange between refugees and host communities?' unless solution_show_page
+    return "What's your solution? Contribute your solutions to improve the lives of refugees."  unless solution_show_page
     solution.description
   end
 

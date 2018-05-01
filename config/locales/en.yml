@@ -33,7 +33,7 @@ en:
     save: "Save Solution"
     twitter: "Tweet about us"
     url:
-      twitter: "http://twitter.com/intent/tweet?status=Connecting refugees and host - what's your solution? @giz_gmbh %{root_url}"
+      twitter: "http://twitter.com/intent/tweet?status=What's your solution? Contribute your solutions to improve the lives of refugees. @giz_gmbh %{root_url}"
   home:
     title: "How can refugees and members of host communities strengthen their relationship through shared business opportunities?"
   sign_up:
