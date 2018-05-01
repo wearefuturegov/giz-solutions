@@ -13,8 +13,8 @@ gem 'geff', git: 'https://github.com/wearefuturegov/geff.git'
 gem 'jquery-rails'
 gem 'simple_form'
 
-gem 'wkhtmltopdf-binary'
 gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary'
 
 # Some likely gems
 # gem 'draper'

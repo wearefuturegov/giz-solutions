@@ -25,14 +25,15 @@ class CustomDeviseMailer < Devise::Mailer
 
   private
 
-  def sendgrid_devise_mail(email_type, record, devise_link=nil)
+  def sendgrid_devise_mail(email_type, record, devise_link = nil)
     sendgrid_mail(
       get_subject(email_type),
       Email.new(email: "#{record.name} <#{record.email}>"),
       get_content(
         "devise/mailer/#{email_type}",
         devise_link: devise_link,
-        name: record.name)
+        name: record.name
+      )
     )
   end
 
