@@ -6,7 +6,7 @@
       %span.bold Once this is executed user will no longer be able to submit more solutions.
       The option to submit will be hidden while you select three winners. You can revert this feature by clicking 'continue accepting submissions' after.
 
-      = button_to I18n.t('buttons.judging'), admin_application_state_path(state: ApplicationState.states['judging']), method: :put
+      = button_to I18n.t('buttons.judging'), admin_application_state_path(state: ApplicationState.states['judging']), class: 'secondary button', method: :put
     %p
-      = link_to I18n.t('buttons.download_solutions'), :admin_export_solutions, class: 'button'
+      = link_to I18n.t('buttons.download_solutions'), :admin_export_solutions, class: 'secondary button'
 

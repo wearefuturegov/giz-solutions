@@ -3,7 +3,8 @@
     %h3 Are you ready to Announce the winners?
     %p Once this is executed the three winners will be highlighted on the home page. The currently selected winners are listed here for shortlisting purposes:
 
-    =button_to I18n.t('buttons.announce_winners'), admin_application_state_path(state: ApplicationState.states['announce_winners']), method: :put
+    %p
+      =button_to I18n.t('buttons.announce_winners'), admin_application_state_path(state: ApplicationState.states['announce_winners']), class: 'secondary button', method: :put
 
     %br
 
@@ -14,6 +15,10 @@
     -else
       %p.bold No winners selected so far
 
-    %br
-    %p If you want to go back and continue accepting new submissions click here:
-    =button_to I18n.t('buttons.continue_collection'), admin_application_state_path(state: ApplicationState.states['collection']), class: 'secondary', method: :put
+    %p
+      = link_to I18n.t('buttons.download_solutions'), :admin_export_solutions, class: 'button secondary'
+
+    %p
+      If you want to go back and continue accepting new submissions click here:
+
+      =button_to I18n.t('buttons.continue_collection'), admin_application_state_path(state: ApplicationState.states['collection']), class: 'button secondary', method: :put
