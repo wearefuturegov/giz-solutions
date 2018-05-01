@@ -14,5 +14,8 @@ GizSolutions::Application.routes.draw do
     resource :winners, only: :update
   end
 
-  resource :application_state, only: %i[edit update]
+  namespace :admin do
+    resource :export_solutions, only: :show
+    resource :application_state, only: %i[edit update]
+  end
 end

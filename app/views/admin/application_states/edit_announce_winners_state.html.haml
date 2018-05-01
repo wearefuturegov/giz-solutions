@@ -1,0 +1,19 @@
+.container
+  .full_width
+
+    %h3 The winners have been chosen
+
+    -if winning_solutions.any?
+      #all_solutions.inner_container
+        = render partial: 'solutions/solution', collection: winning_solutions
+
+    -else
+      %p No winners selected so far
+
+    %p
+      Do you need make an ammendment or to continue judging?
+
+      =button_to I18n.t('buttons.continue_judging'), admin_application_state_path(state: ApplicationState.states['judging']), class: 'secondary button', method: :put
+
+    %p
+      = link_to I18n.t('buttons.download_solutions'), :admin_export_solutions, class: 'secondary button'

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class ApplicationStatesController < ApplicationController
+class Admin::ApplicationStatesController < ApplicationController
   before_action :authenticate_admin!
 
   expose :winning_solutions, -> { Solution.winners }
@@ -13,7 +13,7 @@ class ApplicationStatesController < ApplicationController
     ApplicationState.instance.update(
       state: application_state_params[:state].to_i
     )
-    redirect_to :edit_application_state
+    redirect_to :edit_admin_application_state
   end
 
   private
