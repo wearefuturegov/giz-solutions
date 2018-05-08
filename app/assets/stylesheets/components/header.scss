@@ -1,5 +1,28 @@
 header {
-  .half, img {
+  background-color: $light-gray;
+  position: relative;
+  .logo {
+    display: inline-block;
+    z-index: 1;
+    width: 30%;
+  }
+  .container {
+    position: relative;
+  }
+  .logo_bg {
+    width: 30%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 0;
+    background-color: #fff;
+  }
+  .grey_section {
+    display: inline-block;
+    margin-left: 25px;
+  }
+  img {
     height: 50px;
   }
   a {
@@ -11,12 +34,25 @@ header {
     font-family: $condensed-font-family;
     margin-bottom: 0;
     font-weight: 600;
-    margin-top: 6px;
+    margin-top: 0px;
+    a {
+      color: $dark-gray;
+      &:hover {
+        color: darken($dark-gray, 40%);
+      }
+    }
   }
   @include mob_tab {
     text-align: center;
+    background-color: #fff;
+    nav {
+      background-color: #fff;
+    }
     .align_right {
       text-align: center;
+    }
+    .logo_bg {
+      display: none;
     }
   }
 }

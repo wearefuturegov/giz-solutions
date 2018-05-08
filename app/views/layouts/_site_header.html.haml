@@ -11,15 +11,15 @@
     %a.a2a_dd{:href => "https://www.addtoany.com/share"}
   %script{:async => "", :src => "https://static.addtoany.com/menu/page.js"}
 
+.logo_bg
+
 .container
-  .half
-    %h2=link_to t('strapline'), :root
-  .half.align_right
+  .logo
     =link_to 'https://www.giz.de', target: '_blank' do
       =image_tag('giz-logo.gif')
-%nav
-  .container
-    .full_width
+  .grey_section
+    %h2=link_to t('strapline'), :root
+    %nav
       = link_to t('buttons.overview'), :root, id: 'overview_nav'
       - if ApplicationState.instance.collection?
         = link_to t('buttons.submit_solution'), current_user ? :new_solution : :new_user_registration, id: 'submit_nav'
