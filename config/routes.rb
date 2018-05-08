@@ -6,8 +6,6 @@ GizSolutions::Application.routes.draw do
   devise_for :users, controllers: { registrations: 'registrations' }
   root to: 'pages#home'
 
-  get 'terms', to: 'pages#terms'
-
   resources :restore_solutions, only: :update
 
   resources :solutions do
