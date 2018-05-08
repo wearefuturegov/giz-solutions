@@ -6,7 +6,7 @@ header {
     z-index: 1;
     width: 30%;
     @include mobile {
-      width: 50%;
+      width: 100%;
     }
   }
   .container {
@@ -86,18 +86,19 @@ nav {
   .button_to {
     display: inline-block;
   }
+  .sticky_cont {
+    @include mobile {
+      a:not(.active) {
+        display: none;
+      }
+      .up_link {
+        display: inline-block !important;
+        margin-right: 5px;
+        padding-right: 10px;
 
-  @include mobile {
-    a:not(.active) {
-      display: none;
-    }
-    .up_link {
-      display: inline-block !important;
-      margin-right: 5px;
-      padding-right: 10px;
-
-      &:hover {
-        border-bottom: none;
+        &:hover {
+          border-bottom: none;
+        }
       }
     }
   }
