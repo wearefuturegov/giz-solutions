@@ -24,11 +24,11 @@
   }
   .hero_overlay {
     position: absolute;
-    color: $black;
+    color: #333;
     bottom: 75px;
-    width: 50%;
+    width: 40%;
     padding: 20px;
-    padding-left: calc(15vw + 14px);
+    left: 15%;
     background-color: rgba($white, 0.8);
     h1 {
       margin-bottom: 0;

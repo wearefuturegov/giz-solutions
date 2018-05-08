@@ -9,7 +9,7 @@ $.fn.solutions = function() {
 
   function resizeSolution() {
     $('.solution_image').each(function() {
-      $(this).height($(this).width());
+      $(this).height($(this).width()*0.75);
     });
   }
 };

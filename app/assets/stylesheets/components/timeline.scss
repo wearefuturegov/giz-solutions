@@ -1,9 +1,10 @@
 .timeline {
   position: relative;
   margin-bottom: 50px;
+  font-size: 15px;
   .time_section {
     display: inline-block;
-    width: 22%;
+    width: 16%;
     text-align: center;
 
     &.small_sec {
@@ -15,7 +16,7 @@
   }
   .top_section {
     .time_section {
-      line-height: 22px;
+      line-height: 20px;
 
       &.active {
         font-weight: 600;
@@ -24,7 +25,7 @@
   }
   .timeline_line {
     border-top: 1px solid rgba($black, 0.5);
-    margin-top: 8px;
+    margin-top: 12px;
 
     .time_section {
       border-left: 1px solid rgba($black, 0.5);
@@ -85,6 +86,39 @@
       display: block;
     }
   }
+  .highlighted_dates {
+    .lines div {
+      height: 40px;
+      border-left: solid 2px $red;
+      display: inline-block;
+      width: 16%;
+    }
+    .num_1 {
+      margin-left: 16%;
+    }
+    .num_3 {
+      margin-left: 15%;
+    }
+    .highlight {
+      margin-top: -5px;
+      float: left;
+      width: 16%;
+      p {
+        margin-left: -40%;
+        width: 100%;
+        max-width: 150px;
+        text-align: center;
+        color: $red;
+      }
+      &.num_3 {
+        margin-left: 16%;
+      }
+    }
+  }
+
+
+
+
   @include mobile {
     .time_section {
       display: block;
@@ -96,16 +130,16 @@
         float: none;
       }
     }
-    .top_section, .bottom_section, .timeline_line {
-      width: 43%;
+    .top_section, .bottom_section, .timeline_line, .highlighted_dates {
+      width: 35%;
       display: inline-block;
     }
     .top_section {
       vertical-align: top;
-      margin-top: 55px;
+      margin-top: 30px;
       .time_section {
         line-height: 20px;
-        margin-bottom: 64px;
+        margin-bottom: 70px;
         &.small_sec {
           margin-bottom: 34px;
           margin-top: -7px;
@@ -122,7 +156,7 @@
       .time_section {
         border-left: none;
         border-top: 1px solid rgba($black, 0.5);
-        height: 93px;
+        height: 100px;
         width: 30px;
         &.active:before {
           width: 10px;
@@ -131,7 +165,7 @@
           height: 103%;
         }
         &.small_sec {
-          height: 60px;
+          height: 65px;
         }
         &.small_sec.active:before {
           height: 111%;
@@ -148,7 +182,9 @@
       }
     }
     .bottom_section {
-      width: 35%;
+      width: 16%;
+      position: absolute;
+      margin-top: -10px;
       .time_section {
         text-align: left;
       }
@@ -156,7 +192,7 @@
         float: none;
         margin-left: 20px;
         text-align: left;
-        margin-bottom: 53px;
+        margin-bottom: 54px;
       }
       .final_date {
         text-align: left;
@@ -168,12 +204,56 @@
       }
       .small_sec {
         .date {
-          margin-bottom: 10px;
+          margin-bottom: 15px;
         }
       }
-      .final_sec {
-        .date {
-          margin-bottom: 35px;
+    }
+    .highlighted_dates {
+      float: right;
+      width: 37%;
+
+      .lines {
+        width: 27%;
+        display: inline-block;
+      }
+      .text {
+        width: 64%;
+        float: right;
+        margin-top: 80px;
+      }
+      .lines div {
+        height: 100px;
+        width: 100%;
+        border-left: none;
+        border-top: solid 2px $red;
+        display: block;
+        margin-left: 3px;
+      }
+      .num_1 {
+        margin-top: 100px;
+        margin-left: 0;
+      }
+      .num_3 {
+        margin-top: 75px;
+        margin-left: 0;
+      }
+      .highlight {
+        margin-left: 0px;
+        margin-top: 0;
+        float: none;
+        height: 100px;
+        width: auto;
+        display: inline-block;
+        p {
+          margin-left: 0;
+          width: 100%;
+          max-width: 100%;
+          text-align: left;
+          color: $red;
+        }
+        &.num_3 {
+          margin-top: 60px;
+          margin-left: 0;
         }
       }
     }

@@ -20,6 +20,16 @@
   }
 }
 
+.home_sec {
+  padding-top: 110px;
+  &:focus {
+    outline: none;
+  }
+}
+#giz_solutions {
+  padding-top: 0;
+}
+
 .large_cta {
   margin: 25px 0;
 
@@ -29,14 +39,15 @@
   }
 }
 
-#home_brief {
+#the_challenge {
+  padding-top: 90px;
   .large_cta .button {
     font-size: 18px;
     margin: 0 5px;
   }
 }
 
-#meet_community, #meet_rwanda {
+#meet_community, #meet_rwanda , #possible_examples{
   .third .image {
     width: 100%;
     overflow: hidden;
@@ -48,6 +59,9 @@
   }
 }
 
+.low_margin {
+  margin-bottom: 1px;
+}
 .home {
   .accordion {
     .accord-toggle {
@@ -59,9 +73,6 @@
     }
     .accord-cont {
       padding-top: 5px;
-    }
-    .low_margin {
-      margin-bottom: 1px;
     }
   }
   .open {

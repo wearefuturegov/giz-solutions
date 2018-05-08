@@ -2,11 +2,10 @@
   .full_width
     .thinner
       .solution_actions
-        - if admin_logged_in
-          = render partial: 'admin_buttons'
         - if can_edit_solution
           = link_to 'edit', edit_solution_path(solution), class: 'button'
-
+        - if admin_logged_in
+          = render partial: 'admin_buttons'
       .solution_image
         = image_tag solution.hero_image.url, class: 'auto_fit_image'
 

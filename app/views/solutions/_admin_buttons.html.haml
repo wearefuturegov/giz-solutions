@@ -5,3 +5,11 @@
 - if ApplicationState.instance.judging?
   = button_to I18n.t('buttons.deselect_winner'), solution_winners_path(solution), class: "button", method: :put, remote: true if solution.winner?
   = button_to I18n.t('buttons.select_winner'), solution_winners_path(solution), class: "button", method: :put, remote: true unless solution.winner?
+
+.user_details
+  -user = User.find(solution.user_id)
+  %span.bold Contact details:
+  %span=user.name
+  %span=mail_to user.email
+
+  %hr
