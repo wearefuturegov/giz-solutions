@@ -7,6 +7,8 @@
   %nav.sticky_inner
     .container
       .full_width
+        = link_to '#', class: 'up_link' do
+          =fa_icon 'chevron-up'
         = link_to 'Home', '#giz_solutions', class: 'active'
         = link_to 'The challenge', '#the_challenge'
         = link_to 'Your solution', '#home_intro'
