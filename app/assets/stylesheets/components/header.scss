@@ -29,6 +29,8 @@ nav {
     padding-bottom: 12px;
   }
   a, .unstyle_button {
+    text-decoration: none;
+    vertical-align: middle;
     color: $primary-color;
     font-weight: 600;
     padding: 2px;
@@ -46,6 +48,16 @@ nav {
   }
 }
 
-.sessions.new #log_in_nav, .solutions.index #browse_nav, .registrations.new #submit_nav, .pages.home #overview_nav {
+.sessions.new #log_in_nav, .solutions.index #browse_nav, .registrations.new #submit_nav, .pages.home #overview_nav, nav .active {
   border-bottom: 2px solid;
+}
+
+
+.sticky {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  border-top: 0;
 }

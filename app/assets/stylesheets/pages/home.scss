@@ -20,6 +20,16 @@
   }
 }
 
+.home_sec {
+  padding-top: 90px;
+  &:focus {
+    outline: none;
+  }
+}
+#giz_solutions {
+  padding-top: 0;
+}
+
 .large_cta {
   margin: 25px 0;
 
@@ -29,7 +39,8 @@
   }
 }
 
-#home_brief {
+#the_challenge {
+  padding-top: 90px;
   .large_cta .button {
     font-size: 18px;
     margin: 0 5px;

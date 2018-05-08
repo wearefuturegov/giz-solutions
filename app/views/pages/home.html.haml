@@ -1,4 +1,35 @@
-#home_intro.container
+#giz_solutions.hero.home_sec
+  =image_tag("hero1.jpg")
+  .hero_overlay
+    %h2 Open call for solutions
+    %h1 How can we strengthen business exchange between refugees and host communities?
+.sticky_cont
+  %nav.sticky_inner
+    .container
+      .full_width
+        = link_to 'GIZ Solutions', '#giz_solutions', class: 'active'
+        = link_to 'The Challenge', '#the_challenge'
+
+
+#the_challenge.home_sec.container
+  .half
+    / .red_block
+    /   .brief Your Brief
+    /   %hr
+    /   .tagline How can we increase financial independence of refugees through shared business opportunities with their host communities?
+    .sub_title The challenge
+    %p Refugees often live in displacement for decades, many will never return to their homes. Therefore is is critical to enable them to become financially independent and build a life on their own – in a way that benefits both the refugees and the communities they now live in.
+    =render partial: "cta_buttons"
+  .half
+    .sub_title The opportunity
+
+    %p There is a huge untapped potential to create shared business opportunities for refugees and host communities.
+    %p Think of co-working spaces, shared workshops and joint creation of new services – doing business with each other provides an opportunity to meet, reduce prejudices and improve one’s livelihood.
+    / %p In Rwanda for example, 21% of refugees own a business that employs other people—and 40% of those employees are Rwandan nationals.
+    %p So how can we create more shared business opportunities between both communities?
+
+
+#home_intro.home_sec.container
   .two-thirds.center
     %h2 What’s your solution? Make it matter even more
     %p.bold Do you successfully work with refugees, but you lack the resources to scale your approach globally? Do you have a solution in the private sector that could work for refugees, but you don’t know how?
@@ -20,41 +51,13 @@
           %p You have the chance to see your solution promoted through media, partners and GIZ channels.
 
 
-.hero
-  =image_tag("hero1.jpg")
-  .hero_overlay
-    %h2 Open call for solutions
-    %h1 How can we strengthen business exchange between refugees and host communities?
-
-%br
-
-#home_brief.container
-  .half
-    / .red_block
-    /   .brief Your Brief
-    /   %hr
-    /   .tagline How can we increase financial independence of refugees through shared business opportunities with their host communities?
-    .sub_title The challenge
-    %p Refugees often live in displacement for decades, many will never return to their homes. Therefore is is critical to enable them to become financially independent and build a life on their own – in a way that benefits both the refugees and the communities they now live in.
-    =render partial: "cta_buttons"
-  .half
-    .sub_title The opportunity
-
-    %p There is a huge untapped potential to create shared business opportunities for refugees and host communities.
-    %p Think of co-working spaces, shared workshops and joint creation of new services – doing business with each other provides an opportunity to meet, reduce prejudices and improve one’s livelihood.
-    / %p In Rwanda for example, 21% of refugees own a business that employs other people—and 40% of those employees are Rwandan nationals.
-    %p So how can we create more shared business opportunities between both communities?
-
-%br
-%br
-
 -if ApplicationState.instance.announce_winners?
   .container
     %h2=t('solution.winners.title')
     #all_solutions.inner_container
       = render partial: 'solutions/solution', collection: winning_solutions
 
-.container
+.home_sec.container
   .full_width
     %h2 When things are happening
     .timeline
@@ -102,13 +105,7 @@
             %span Oct
             %span 16
 
-
-%br
-/ .container
-/   .full_width
-/     %hr
-
-#meet_community.container
+#meet_community.home_sec.container
   .full_width
     %h2 Meet members of the host and refugee community
     .inner_container
@@ -122,7 +119,7 @@
         .image= image_tag "person_3.jpg", class: 'auto_fit_image'
         .content Wuoi lost his cows and income when he escaped South Sudan with his family . They have now lived in Rwanda for almost four years. At the beginning, they received food from WFP. Now, he collects once a month $US 47 to feed his family of ten. “When I walk away with the money, I feel free. I like the choice I have now to buy the food we want to eat.”
 
-#meet_rwanda.container
+#meet_rwanda.home_sec.container
   .full_width
     %h2 Some context about Rwanda
     .inner_container
@@ -142,7 +139,7 @@
           .bold Infrastructure
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in.
 
-.container
+.home_sec.container
   .full_width
     %h2 Everything you need to know before submitting
     .accordion

@@ -25,3 +25,19 @@ $(document).ready(function() {
 $(window).load(function() {
   $('.auto_fit_image').autoFitImage();
 });
+
+
+$(window).on('scroll', function () {
+  var cur_pos = $(this).scrollTop();
+
+  $('.home_sec').each(function() {
+    var top = $(this).offset().top - $('.sticky_inner').outerHeight(),
+        bottom = top + $(this).outerHeight();
+
+    if (cur_pos >= top && cur_pos <= bottom) {
+      $('.sticky_inner .active').removeClass('active');
+
+      $('.sticky_inner').find('a[href="#'+$(this).attr('id')+'"]').addClass('active');
+    }
+  });
+});
