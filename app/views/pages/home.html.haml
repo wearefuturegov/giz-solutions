@@ -83,7 +83,25 @@
 #when.home_sec.container
   .full_width
     %h2 When things are happening
-    %p this is a contextual line of info
+    - if ApplicationState.instance.state == 'collection'
+      %p You can now submit and edit you solutions. The deadline is for publishing solutions is 13/07/18.
+    -elsif ApplicationState.instance.state == 'judging'
+      %p Thanks to everyone who submitted their solution - we are overwhelmed by all the great entries! The jury is choosing the winners right now. The winners will be announced on 20/07/18
+    -elsif ApplicationState.instance.state == 'announce_winners'
+      %p
+        The winners have been chosen, you can see them alongside all the other solutions
+        =link_to "here.", :solutions
+        The lab in Rwanda will start on 24/09/18.
+    -elsif DateTime.new(2018,9,24).past? && DateTime.new(2018,10,1).future?
+      %p The winners are prototyping their ideas together with refugee and host communities in Rwanda from 24/9/18 to 01/10/18.
+    -elsif DateTime.new(2018,10,1).past? && DateTime.new(2018,10,15).future?
+      %p On the 15/10/18 the teams will pitch for seed investment
+    -elsif DateTime.new(2018,10,15).past? && DateTime.new(2019,3,19).future?
+      %p Right now, the solutions are being tested in Rwanda to evaluate opportunities for global scaling.
+    -else
+      %p Everything is complete and the solutions are being supported to upscale globally.
+
+
     %br
     .timeline
       .top_section
@@ -91,14 +109,13 @@
           %span Call for solutions: applications
         .time_section{:class => ("active" if ApplicationState.instance.state == 'judging')}
           %span Selection of winners
-        .time_section.small_sec{:class => ("active" if ApplicationState.instance.state == 'announce_winners')}
-        .time_section.small_sec
+        .time_section.small_sec{:class => ("active" if ApplicationState.instance.state == 'announce_winners' && DateTime.new(2018,9,24).future?)}
+        .time_section.small_sec{:class => ("active" if DateTime.new(2018,9,24).past? && DateTime.new(2018,10,1).future?)}
           %span Lab in Rwanda
-        .time_section.small_sec.investment
-
-        .time_section
+        .time_section.small_sec.investment{:class => ("active" if DateTime.new(2018,10,1).past? && DateTime.new(2018,10,15).future?)}
+        .time_section{:class => ("active" if DateTime.new(2018,10,15).past? && DateTime.new(2019,3,19).future?)}
           %span Market test in Rwanda
-        .time_section.actual_final
+        .time_section.actual_final{:class => ("active" if DateTime.new(2019,3,19).past?)}
           %span GIZ supports upscaling globally
 
       .timeline_line
@@ -112,7 +129,7 @@
       .bottom_section
         .time_section
           .date
-            %span June
+            %span Jun
             %span 15
         .time_section
           .date
