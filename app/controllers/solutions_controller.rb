@@ -6,8 +6,8 @@ class SolutionsController < ApplicationController
   before_action :authenticate_can_edit!, only: %i[update edit]
 
   before_action :authenticate_can_show_archived!, only: %i[show]
-
   expose :solution, scope: :with_deleted
+
   expose :winning_solutions, -> { Solution.winners }
   expose :solutions, lambda {
     if ApplicationState.instance.announce_winners?
@@ -26,7 +26,11 @@ class SolutionsController < ApplicationController
       (admin_logged_in || current_user&.solution == solution)
   }
 
-  def show; end
+  expose :solution_navigator, lambda {
+    SolutionNavigator.new(Solution.pluck(:id), params[:id].to_i)
+  }
+
+  def show;  end
 
   def index; end
 
