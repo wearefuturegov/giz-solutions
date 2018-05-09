@@ -1,24 +1,19 @@
-.container
-  .third
-    %ul
-      %li=link_to 'Registration information', 'https://www.giz.de/en/html/registration_information.html', target: '_blank', class: 'button'
-      / %li.button Data Protection
-      %li=link_to 'Legal Information', "https://www.giz.de/en/html/legal_information.html", target: '_blank', class: 'button'
+.container.centre
+  .full_width
+    %p Share this page on Facebook or Twitter:
 
+    =link_to I18n.t('buttons.url.twitter', share_url: page_og_url), target: '_blank', class: 'button iconbtn twitter' do
+      =image_tag('icon-twitter-footer.svg')
+      %span= I18n.t('buttons.twitter')
 
-  .two-thirds
-    %ul
-      %li
-        %p
-          (By clicking on one of these links you will leave the GIZ website)
+    =link_to I18n.t('buttons.url.facebook', share_url: page_og_url), target: '_blank', class: 'button iconbtn facebook' do
+      =image_tag('icon-facebook-footer.svg')
+      %span= I18n.t('buttons.facebook')
 
-      %li
-        =link_to I18n.t('buttons.url.twitter', share_url: page_og_url), target: '_blank' do
-          =image_tag('icon-twitter-footer.svg')
-          .button= I18n.t('buttons.twitter')
-
-      %li
-        =link_to I18n.t('buttons.url.facebook', share_url: page_og_url), target: '_blank' do
-          =image_tag('icon-facebook-footer.svg')
-          .button= I18n.t('buttons.facebook')
+%footer{:class => "site-footer", :role => "contentinfo"}
+  .container
+    .third
+      %ul
+        %li=link_to 'Registration information', 'https://www.giz.de/en/html/registration_information.html', target: '_blank', class: 'button'
+        %li=link_to 'Legal Information', "https://www.giz.de/en/html/legal_information.html", target: '_blank', class: 'button'
 
