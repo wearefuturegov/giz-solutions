@@ -7,6 +7,13 @@ footer {
     margin-bottom: 0;
   }
   a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 23px;
+    &:hover {
+      color: rgba(255,255,255,0.7);
+    }
     div.button {
       margin-top: -15px;
     }
@@ -18,6 +25,22 @@ footer {
 
 .centre {
   text-align: center;
+}
+
+.socials {
+  margin-top: 15px;
+  a {
+    padding: 5px;
+    margin-right: 5px;
+
+    &:first-child {
+      padding-left: 0px;
+    }
+  }
+  img {
+    width: 25px;
+    height: 25px;
+  }
 }
 
 .iconbtn {
