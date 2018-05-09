@@ -1,56 +1,56 @@
 @font-face {
   font-family: 'GravurCodensedRegular';
-  src:url(asset-path('/assets/Fonts/GravurCodensedRegular.woff'));
+  src: font-url(asset-path('/assets/fonts/GravurCodensedRegular.woff'));
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'GravurCodensedBold';
-  src:url(asset-path('/assets/Fonts/GravurCodensedBold.woff'));
+  src: font-url(asset-path('/assets/fonts/GravurCodensedBold.woff'));
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'GravurCodensedLight';
-  src:url(asset-path('/assets/Fonts/GravurCodensedLight.woff'));
+  src: font-url(asset-path('/assets/fonts/GravurCodensedLight.woff'));
   font-weight: light;
   font-style: normal;
 }
 
 @font-face{
     font-family: 'StempelGaramondRoma';
-    src:url(asset-path('/assets/Fonts/StempelGaramondW02Roma.eot'));
-    src:url(asset-path('/assets/Fonts/StempelGaramondW02Roma.eot?#iefix'));
-    src:url(asset-path('/assets/Fonts/StempelGaramondW02Roma.woff2'));
-    src:url(asset-path('/assets/Fonts/StempelGaramondW02Roma.woff'));
-    src:url(asset-path('/assets/Fonts/StempelGaramondW02Roma.ttf'));
+    src: font-url(asset-path('/assets/fonts/StempelGaramondW02Roma.eot'));
+    src: font-url(asset-path('/assets/fonts/StempelGaramondW02Roma.eot?#iefix'));
+    src: font-url(asset-path('/assets/fonts/StempelGaramondW02Roma.woff2'));
+    src: font-url(asset-path('/assets/fonts/StempelGaramondW02Roma.woff'));
+    src: font-url(asset-path('/assets/fonts/StempelGaramondW02Roma.ttf'));
 }
 
 @font-face{
   font-family: 'StempelGaramondW02Ital';
-  src:url(asset-path('/assets/Fonts/StempelGaramondW02Ital.eot'));
-  src:url(asset-path('/assets/Fonts/StempelGaramondW02Ital.eot?#iefix'));
-  src:url(asset-path('/assets/Fonts/StempelGaramondW02Ital.woff2'));
-  src:url(asset-path('/assets/Fonts/StempelGaramondW02Ital.woff'));
-  src:url(asset-path('/assets/Fonts/StempelGaramondW02Ital.ttf'));
+  src: font-url(asset-path('/assets/fonts/StempelGaramondW02Ital.eot'));
+  src: font-url(asset-path('/assets/fonts/StempelGaramondW02Ital.eot?#iefix'));
+  src: font-url(asset-path('/assets/fonts/StempelGaramondW02Ital.woff2'));
+  src: font-url(asset-path('/assets/fonts/StempelGaramondW02Ital.woff'));
+  src: font-url(asset-path('/assets/fonts/StempelGaramondW02Ital.ttf'));
 }
 @font-face{
   font-family: 'StempelGaramondW02Bold';
-  src:url(asset-path('/assets/Fonts/StempelGaramondW02Bold.eot'));
-  src:url(asset-path('/assets/Fonts/StempelGaramondW02Bold.eot?#iefix'));
-  src:url(asset-path('/assets/Fonts/StempelGaramondW02Bold.woff2'));
-  src:url(asset-path('/assets/Fonts/StempelGaramondW02Bold.woff'));
-  src:url(asset-path('/assets/Fonts/StempelGaramondW02Bold.ttf'));
+  src: font-url(asset-path('/assets/fonts/StempelGaramondW02Bold.eot'));
+  src: font-url(asset-path('/assets/fonts/StempelGaramondW02Bold.eot?#iefix'));
+  src: font-url(asset-path('/assets/fonts/StempelGaramondW02Bold.woff2'));
+  src: font-url(asset-path('/assets/fonts/StempelGaramondW02Bold.woff'));
+  src: font-url(asset-path('/assets/fonts/StempelGaramondW02Bold.ttf'));
 }
 @font-face{
   font-family: 'StempelGaramondW02BdIt';
-  src:url(asset-path('/assets/Fonts/StempelGaramondW02BdIt.eot'));
-  src:url(asset-path('/assets/Fonts/StempelGaramondW02BdIt.eot?#iefix'));
-  src:url(asset-path('/assets/Fonts/StempelGaramondW02BdIt.woff2'));
-  src:url(asset-path('/assets/Fonts/StempelGaramondW02BdIt.woff'));
-  src:url(asset-path('/assets/Fonts/StempelGaramondW02BdIt.ttf'));
+  src: font-url(asset-path('/assets/fonts/StempelGaramondW02BdIt.eot'));
+  src: font-url(asset-path('/assets/fonts/StempelGaramondW02BdIt.eot?#iefix'));
+  src: font-url(asset-path('/assets/fonts/StempelGaramondW02BdIt.woff2'));
+  src: font-url(asset-path('/assets/fonts/StempelGaramondW02BdIt.woff'));
+  src: font-url(asset-path('/assets/fonts/StempelGaramondW02BdIt.ttf'));
 }
 
 
@@ -61,7 +61,7 @@ $dark-gray: #B4B4B4;
 $base-border-radius: 0;
 
 $base-font-family: 'StempelGaramondRoma', $font-stack-system;
-$base-font-family-bold: 'StempelGaramondW02Bold', $font-stack-system;
+$base-font-family-bold: 'StempelGaramondW02Bold', serif;
 $condensed-font-family: 'GravurCodensedRegular', sans-serif;
 
 
