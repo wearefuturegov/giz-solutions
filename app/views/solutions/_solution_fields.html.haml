@@ -34,7 +34,7 @@
   =form.input :embedded_video_url, as: :text, label: false
 
 -if form.object.new_record?
-  = form.input :terms_accepted, as: :boolean, required: true, label: "Please read and accept the #{link_to('Terms and Conditions', terms_path)} before submitting your solution".html_safe
+  = form.input :terms_accepted, as: :boolean, required: true, label: "Please read and accept the #{link_to('Terms and Conditions', 'https://www.giz.de/en/html/legal_information.html', target: '_blank')} before submitting your solution".html_safe
 
 .form-actions.full_width_cta
   = form.submit t('buttons.save')
