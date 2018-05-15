@@ -2,15 +2,21 @@ header {
   background-color: $light-gray;
   position: relative;
   .logo {
+    vertical-align: top;
     display: inline-block;
     z-index: 1;
-    width: 30%;
+    width: 28%;
+    text-align: center;
     @include mobile {
       width: 100%;
+    }
+    a {
+      vertical-align: text-bottom !important;
     }
   }
   .container {
     position: relative;
+    padding: 14px;
   }
   .logo_bg {
     width: 30%;
@@ -36,8 +42,9 @@ header {
     text-transform: uppercase;
     font-family: $condensed-font-family;
     margin-bottom: 0;
-    font-weight: 600;
+    font-weight: 400;
     margin-top: 0px;
+    margin-bottom: 15px;
     a {
       color: $dark-gray;
       &:hover {
