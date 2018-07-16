@@ -5,7 +5,7 @@
   =image_tag solution.hero_image, class: 'small_img'
   %br
   %br
-  = form.input :hero_image, as: :file, label: 'Replace your banner image', hint: 'Choose a photo for your solution. Good photos will be at least 1024 pixels wide and 450 pixels tall, but no larger than 5MB.'
+  = form.input :hero_image, as: :file, label: 'Replace your banner image', hint: 'Choose a photo for your solution. Good photos will be at least 1024 pixels wide and 450 pixels tall, but no larger than 4MB.'
 -else
   = form.input :hero_image, as: :file, label: 'Upload a banner image to describe your solution', hint: 'Choose a photo for your solution. Good photos will be at least 1024 pixels wide and 450 pixels tall, but no larger than 5MB.'
 
@@ -21,8 +21,8 @@
 
 =form.input :website, as: :string, label: '(Optional) If there is a website with more details add here:'
 
-%label
-  Share a video too if you have one.
+.video_input
+  %label Share a video too if you have one.
   .normal
     %p From your video on YouTube you need to:
     %ol.default
@@ -34,7 +34,10 @@
   =form.input :embedded_video_url, as: :text, label: false
 
 -if form.object.new_record?
-  = form.input :terms_accepted, as: :boolean, required: true, label: "Please read and accept the #{link_to('Terms and Conditions', 'https://www.giz.de/en/html/legal_information.html', target: '_blank')} before submitting your solution".html_safe
+  %p.small By submission of your solution and consenting to the terms and conditions of the competition, you agree that the material submitted by you, which may include pictures and videos (“ Submitted Material” ) may be published by GIZ. GIZ obtains an irrevocable, non-exclusive, royalty-free license to use, distribute to the public, translate and publicly display the Submitted Material on an educational, promotional and not-for-profit basis starting on the date of the participation of the competition.
+  %p.small You warrant that your Submitted Material  , including uploaded picture(s) and/or videos is free from any copyright or other third party rights that would prejudice the use of the solution, the picture and the video to the extent described above. By submitting the Submitted Material, you indemnify GIZ against all third party claims arising from the granting or exercise of the right of use under this provision and shall reimburse GIZ for all costs incurred in connection with corresponding legal defence.
+
+  = form.input :terms_accepted, as: :boolean, required: true, label: "I accept GIZ's #{link_to('Terms & Conditions', 'https://www.giz.de/en/html/legal_information.html', target: '_blank')} and #{link_to('Data protection policy ***NEED LINK', 'https://www.giz.de/en/html/legal_information.html', target: '_blank')}".html_safe
 
 .form-actions.full_width_cta
   = form.submit t('buttons.save')

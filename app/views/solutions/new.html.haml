@@ -2,5 +2,10 @@
   .full_width
     .thinner.full_width_inputs.restricted_form
       %h2=t('solution.create')
+      %p
+        You can submit and edit your solution until the
+        %span.bold 31.10.2018.
+      %br
+
       = simple_form_for solution do |form|
         =render partial: 'solution_fields', locals: { form: form }
