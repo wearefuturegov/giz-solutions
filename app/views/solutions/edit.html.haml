@@ -2,5 +2,9 @@
   .full_width
     .thinner.full_width_inputs
       %h2=t('solution.edit')
+      %p
+        You can submit and edit your solution until the
+        %span.bold 31.10.2018.
+      %br
       = simple_form_for solution, url: solution_path(solution), method: :put do |form|
         =render partial: 'solution_fields', locals: { form: form }
