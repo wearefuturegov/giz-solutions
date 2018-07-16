@@ -48,11 +48,14 @@
 }
 
 #meet_community, #meet_rwanda , #possible_examples{
-  .third .image {
+  .third .image, .half .image {
     width: 100%;
     overflow: hidden;
     height: 200px;
     margin-bottom: 10px;
+  }
+  .half .image {
+    height: 325px;
   }
   h2 {
     margin-bottom: 30px;
