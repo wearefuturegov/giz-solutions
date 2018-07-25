@@ -70,7 +70,6 @@ module GizSolutions
     config.secret_token = ENV['SECRET_TOKEN']
     config.secret_key_base = ENV['SECRET_KEY_BASE']
     config.devise_secret_key = ENV['DEVISE_SECRET_KEY']
-    config.facebook_id = ENV['FACEBOOK_ID']
 
     config.hostname = ENV.fetch('HOST_URL', 'localhost:3000')
 
@@ -100,7 +99,6 @@ module GizSolutions
     }
 
     # config.assets.paths << Rails.root.join("app", "assets", "fonts")
-    config.assets.precompile += %w[facebook.js]
 
     config.assets.precompile << /\.(?:svg|eot|woff|ttf)$/
   end
