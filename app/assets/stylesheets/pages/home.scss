@@ -53,9 +53,20 @@
     overflow: hidden;
     height: 200px;
     margin-bottom: 10px;
+    @include tablet {
+      height: 375px;
+    }
   }
+  // .third {
+  //   @include tablet {
+  //     padding: 0 50px;
+  //   }
+  // }
   .half .image {
     height: 325px;
+    @include tablet {
+      height: 375px;
+    }
   }
   h2 {
     margin-bottom: 30px;
@@ -98,3 +109,4 @@
   font-size: 13px;
   line-height: 17px;
 }
+
