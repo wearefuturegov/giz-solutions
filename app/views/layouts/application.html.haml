@@ -4,7 +4,7 @@
     = render 'layouts/html_head'
 
     %body{:class => page_class}
-      %header{:class => "site-header", :role => "banner"}
+      %header{:class => "site-header", :role => "banner", id: "top_of_site"}
         = render 'layouts/site_header'
       = render 'layouts/alerts'
       %main{:class => "main", :id => "main", :role => "main"}
