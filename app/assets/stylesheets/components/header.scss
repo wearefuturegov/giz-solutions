@@ -103,7 +103,10 @@ nav {
 }
 .sticky_cont {
   @include mobile {
-    a:not(.active) {
+    // a:not(.active) {
+    //   display: none;
+    // }
+    #home_link {
       display: none;
     }
     .up_link {

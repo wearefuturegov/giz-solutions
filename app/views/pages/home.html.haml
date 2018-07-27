@@ -9,9 +9,9 @@
   %nav.sticky_inner
     .container
       .full_width
-        = link_to '#', class: 'up_link' do
+        = link_to '#top_of_site', class: 'up_link' do
           =fa_icon 'chevron-up'
-        = link_to 'Home', '#top_of_site', class: 'active'
+        = link_to 'Home', '#top_of_site', class: 'active', id: 'home_link'
         = link_to 'Challenge and solution', '#the_challenge'
         / = link_to 'Your solution', '#home_intro'
         = link_to 'Context', '#home_why'
