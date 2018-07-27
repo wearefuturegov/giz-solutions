@@ -71,8 +71,8 @@ header {
 nav {
   background-color: $light-gray;
   .container {
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
   a, .unstyle_button {
     text-decoration: none;
@@ -83,7 +83,7 @@ nav {
     margin-right: 35px;
     font-family: $condensed-font-family;
     font-size: 17px;
-    line-height: 26px;
+    line-height: 32px;
     text-transform: capitalize;
     border-bottom: 2px solid transparent;
     -webkit-font-smoothing: unset;
@@ -102,12 +102,18 @@ nav {
   }
 }
 .sticky_cont {
+  a {
+    font-size: 20px !important;
+  }
   @include mobile {
     // a:not(.active) {
     //   display: none;
     // }
     #home_link {
       display: none;
+    }
+    a {
+      font-size: 17px !important;
     }
     .up_link {
       display: inline-block !important;
