@@ -1,7 +1,7 @@
 #{$all-text-inputs} {
   border: 1px solid rgba(0,0,0,.15);
   border-radius: .25rem;
-  font-family: $condensed-font-family;
+  // font-family: $condensed-font-family;
   &:hover {
     border: 1px solid rgba($black, 0.6);
   }
@@ -13,7 +13,6 @@
 
 label, button, .button, input[type=submit] {
   font-family: $condensed-font-family;
-  text-transform: uppercase;
 }
 
 .input label {
@@ -53,4 +52,8 @@ label, button, .button, input[type=submit] {
 
 .simple_form span.hint {
   margin-top: 0px;
+}
+
+textarea {
+  padding: 10px;
 }
