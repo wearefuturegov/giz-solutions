@@ -1,6 +1,7 @@
-.container.centre
+.container.centre#share_btns
   .full_width
     %p Share this page on Facebook or Twitter:
+    %p.small By clicking these buttons, you'll leave the GIZ website.
 
     =link_to I18n.t('buttons.url.facebook', share_url: page_og_url), target: '_blank', class: 'button iconbtn facebook' do
       =image_tag('icon-facebook-footer.svg')
