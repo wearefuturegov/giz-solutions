@@ -30,7 +30,7 @@ $(window).load(function() {
 $(window).on('scroll', function () {
   var cur_pos = $(this).scrollTop();
 
-  $('.home_sec').each(function() {
+  $('.home_section_cont').each(function() {
     var top = $(this).offset().top - $('.sticky_inner').outerHeight(),
         bottom = top + $(this).outerHeight();
 
