@@ -31,7 +31,14 @@
       %p Refugees often live in displacement for decades. Therefore, it is critical to enable them to become economically independent and build a life on their own in a way that benefits both the refugees and their hosting communities – who also often face substantial problems.
       =render partial: "cta_buttons"
 
-      %p ***stay up to date buttons
+      .up_to_date.full_width.centre
+        %p Stay up to date:
+        =link_to 'https://www.facebook.com/gizprofile', target: '_blank' do
+          =fa_icon 'facebook'
+          Facebook
+        =link_to 'https://twitter.com/giz_gmbh', target: '_blank' do
+          =fa_icon 'twitter'
+          Twitter
     .half
       .sub_title What‘s the opportunity?
       %p There is a huge untapped potential to create shared business opportunities for refugees and host communities.
