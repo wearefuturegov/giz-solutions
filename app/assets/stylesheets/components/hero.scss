@@ -13,6 +13,8 @@
   h1, h2 {
     color: $black;
     font-size: 38px;
+    line-height: 42px;
+    font-weight: 500;
     @include mob_tab {
       font-size: 30px;
     }
@@ -24,22 +26,41 @@
   }
   .hero_overlay {
     position: absolute;
-    color: #333;
     bottom: 75px;
-    width: 40%;
-    padding: 20px;
-    left: 15%;
-    background-color: rgba($white, 0.8);
+    left: 0;
+    width: 100%;
+    @include mobile {
+      position: static;
+      width: 100%;
+    }
+    .hero_cont {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 47px;
+
+      @include hd-desktop {
+        max-width: 1300px;
+      }
+      @include mob_tab {
+        padding: 0;
+      }
+    }
+    .hero_inner {
+      width: 50%;
+      padding: 20px;
+      color: #333;
+      background-color: rgba($white, 0.8);
+      @include mob_tab {
+        position: static;
+        width: 100%;
+        padding: 20px;
+      }
+    }
     h1 {
       margin-bottom: 0;
     }
     .container {
       padding: 15px;
-    }
-    @include mob_tab {
-      position: static;
-      width: 100%;
-      padding: 20px;
     }
   }
 
