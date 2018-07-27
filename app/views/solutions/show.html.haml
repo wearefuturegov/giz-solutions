@@ -6,12 +6,6 @@
           = link_to 'edit', edit_solution_path(solution), class: 'button'
         - if admin_logged_in
           = render partial: 'admin_buttons'
-        .half
-          <
-          =link_to 'Previous solution', solution_path(id: solution_navigator.previous_solution_id) if solution_navigator.previous_solution_id
-        .half
-          =link_to 'Next solution', solution_path(id: solution_navigator.next_solution_id) if solution_navigator.next_solution_id
-          >
       .solution_image
         = image_tag solution.hero_image.url, class: 'auto_fit_image'
 
@@ -46,3 +40,14 @@
       - if solution.embedded_video_url
         .video_embed
           =solution.embedded_video_url.html_safe
+      .nxt_btns
+        .half
+          -if solution_navigator.previous_solution_id
+            =link_to solution_path(id: solution_navigator.previous_solution_id) do
+              =fa_icon "caret-left"
+              Previous solution
+        .half.right
+          -if solution_navigator.next_solution_id
+            =link_to solution_path(id: solution_navigator.next_solution_id) do
+              Next solution
+              =fa_icon "caret-right"
