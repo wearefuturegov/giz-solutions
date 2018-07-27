@@ -87,6 +87,7 @@ nav {
     text-transform: capitalize;
     border-bottom: 2px solid transparent;
     -webkit-font-smoothing: unset;
+    white-space: nowrap;
 
     &:hover {
       color: $primary-color;
