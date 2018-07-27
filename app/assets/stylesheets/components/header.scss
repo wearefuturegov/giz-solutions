@@ -78,12 +78,15 @@ nav {
     text-decoration: none;
     vertical-align: middle;
     color: $primary-color;
-    font-weight: 600;
+    font-weight: 400;
     padding: 2px;
     margin-right: 35px;
     font-family: $condensed-font-family;
     font-size: 17px;
-    line-height: 35px;
+    line-height: 26px;
+    text-transform: capitalize;
+    border-bottom: 2px solid transparent;
+    -webkit-font-smoothing: unset;
 
     &:hover {
       color: $primary-color;
