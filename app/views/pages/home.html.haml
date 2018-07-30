@@ -5,6 +5,13 @@
       .hero_inner
         %h2 Open call for solutions
         %h1 How can we strengthen business exchange between refugees and host communities?
+        .buttons_cont
+          - if ApplicationState.instance.collection?
+            =link_to t('buttons.submit_solution'), :new_solution, class: 'button'
+          - elsif ApplicationState.instance.judging?
+            %p.bold=t('solution.judging.title')
+          - elsif ApplicationState.instance.announce_winners?
+          =link_to t('buttons.browse_solution'), :solutions, class: 'button secondary'
 .sticky_cont
   %nav.sticky_inner
     .container
