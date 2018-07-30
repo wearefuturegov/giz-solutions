@@ -19,7 +19,7 @@ header {
     padding: 14px;
   }
   .logo_bg {
-    width: 30%;
+    width: 33%;
     position: absolute;
     top: 0;
     left: 0;
@@ -29,10 +29,10 @@ header {
   }
   .grey_section {
     display: inline-block;
-    margin-left: 25px;
+    margin-left: 79px;
   }
   img {
-    height: 50px;
+    width: 236px;
   }
   a {
     text-decoration: none;
@@ -52,14 +52,36 @@ header {
       }
     }
   }
+  @media (max-width: 1054px) {
+    .logo_bg {
+      width: 28%;
+    }
+    .grey_section {
+      margin-left: 14px;
+    }
+  }
+
   @include mob_tab {
     text-align: center;
     background-color: #fff;
-    nav {
-      background-color: #fff;
+    nav a, .unstyle_button {
+      margin-right: 15px;
+      margin-left: 15px;
+    }
+    .container {
+      padding: 0;
+      padding-top: 14px;
     }
     .align_right {
       text-align: center;
+    }
+    .grey_section {
+      background-color: $light-gray;
+      margin-left: 0;
+      padding: 14px;
+      padding-top: 20px;
+      position: inherit;
+      width: 100%;
     }
     .logo_bg {
       display: none;
