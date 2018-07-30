@@ -29,7 +29,7 @@ class SolutionsController < ApplicationController
   }
 
   expose :solution_navigator, lambda {
-    SolutionNavigator.new(Solution.pluck(:id), params[:id].to_i)
+    SolutionNavigator.new(Solution.with_deleted.pluck(:id), params[:id].to_i)
   }
 
   def show;  end
