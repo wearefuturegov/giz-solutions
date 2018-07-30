@@ -30,6 +30,7 @@ header {
   .grey_section {
     display: inline-block;
     margin-left: 79px;
+    margin-top: 5px;
   }
   img {
     width: 236px;
@@ -44,11 +45,13 @@ header {
     margin-bottom: 0;
     font-weight: 400;
     margin-top: 0px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
+    font-size: 32px;
     a {
-      color: $dark-gray;
+      color: #666;
       &:hover {
-        color: darken($dark-gray, 40%);
+        color: #666;
+        border-bottom: 1px solid $primary-color;
       }
     }
   }
