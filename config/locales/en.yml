@@ -13,6 +13,7 @@ en:
   buttons:
     overview: "Overview"
     submit_solution: "Submit Your Solution"
+    edit_solution: "Edit Your Solution"
     browse_solution: "Browse All Solutions"
     view_all: "View all solutions"
     log_out: "Log out"

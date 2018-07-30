@@ -9,6 +9,13 @@
 
     / = wicked_pdf_stylesheet_link_tag    "pdf-manifest"
     / = wicked_pdf_javascript_include_tag "pdf-manifest"
+    
+    :css
+      #solution_show {
+        display: block;
+        clear: both;
+        page-break-after: always;
+      }
 
     %body.pdf
       .container

@@ -9,7 +9,10 @@
     %nav
       = link_to t('buttons.overview'), :root, id: 'overview_nav'
       - if ApplicationState.instance.collection?
-        = link_to t('buttons.submit_solution'), current_user ? :new_solution : :new_user_registration, id: 'submit_nav'
+        - if current_user && current_user.solution.present?
+          = link_to t('buttons.edit_solution'), edit_solution_path(current_user.solution), id: 'submit_nav'
+        - else
+          = link_to t('buttons.submit_solution'), current_user ? :new_solution : :new_user_registration, id: 'submit_nav'
       = link_to t('buttons.browse_solution'), :solutions, id: 'browse_nav'
       - if current_user
         =link_to t('buttons.admin'), :edit_admin_application_state if admin_logged_in
