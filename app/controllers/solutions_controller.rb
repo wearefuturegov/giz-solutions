@@ -6,6 +6,8 @@ class SolutionsController < ApplicationController
   before_action :authenticate_can_edit!, only: %i[update edit]
 
   before_action :authenticate_can_show_archived!, only: %i[show]
+  before_action :set_cache_headers, only: %i[new]
+  
   expose :solution, scope: :with_deleted
 
   expose :winning_solutions, -> { Solution.winners }
@@ -34,7 +36,13 @@ class SolutionsController < ApplicationController
 
   def index; end
 
-  def new; end
+  def new
+    if current_user.solution.nil?
+      render :new
+    else
+      redirect_to edit_solution_path(current_user.solution)
+    end
+  end
 
   def destroy
     if solution.delete
@@ -70,6 +78,12 @@ class SolutionsController < ApplicationController
   end
 
   private
+  
+  def set_cache_headers
+    response.headers['Cache-Control'] = 'no-cache, no-store'
+    response.headers['Pragma'] = 'no-cache'
+    response.headers['Expires'] = 'Fri, 01 Jan 1990 00:00:00 GMT'
+  end
 
   def authenticate_can_show_archived!
     return unless solution.deleted?
