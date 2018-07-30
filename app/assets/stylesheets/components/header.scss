@@ -55,12 +55,12 @@ header {
       }
     }
   }
-  @media (max-width: 1054px) {
+  @media (max-width: 1076px) {
     .logo_bg {
       width: 28%;
     }
     .grey_section {
-      margin-left: 14px;
+      margin-left: 10px;
     }
   }
 
@@ -149,6 +149,16 @@ nav {
         border-bottom: none;
       }
     }
+  }
+}
+
+header nav {
+  a, .unstyle_button {
+    font-size: 20px;
+    margin-right: 25px;
+  }
+  .unstyle_button {
+    margin-right: 0;
   }
 }
 
