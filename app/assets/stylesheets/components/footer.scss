@@ -3,6 +3,9 @@ footer {
   color: $white;
   margin-top: 25px;
   font-family: $condensed-font-family;
+  .container {
+    padding: 40px 10px;
+  }
   p {
     margin-bottom: 0;
   }
@@ -28,7 +31,7 @@ footer {
 }
 
 .socials {
-  margin-top: 15px;
+  padding: 20px 0;
   a {
     padding: 5px;
     margin-right: 5px;
