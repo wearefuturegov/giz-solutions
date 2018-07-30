@@ -34,7 +34,13 @@ class SolutionsController < ApplicationController
 
   def index; end
 
-  def new; end
+  def new
+    if current_user.solution.nil?
+      render :new
+    else
+      redirect_to edit_solution_path(current_user.solution)
+    end
+  end
 
   def destroy
     if solution.delete
