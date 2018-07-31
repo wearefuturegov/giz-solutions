@@ -26,6 +26,10 @@ header {
     height: 100%;
     z-index: 0;
     background-color: #fff;
+
+    @include hd-desktop {
+      width: 35%;
+    }
   }
   .grey_section {
     display: inline-block;
@@ -61,6 +65,11 @@ header {
     }
     .grey_section {
       margin-left: 10px;
+    }
+  }
+  @media (min-width: 2000px) {
+    .logo_bg {
+      width: 40%;
     }
   }
 
