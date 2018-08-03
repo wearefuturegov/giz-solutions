@@ -34,9 +34,7 @@
   =form.input :embedded_video_url, as: :text, label: false
 
 -if form.object.new_record?
-  %p.small By submission of your solution and consenting to the terms and conditions of the competition, you agree that the material submitted by you, which may include pictures and videos (“ Submitted Material” ) may be published by GIZ. GIZ obtains an irrevocable, non-exclusive, royalty-free license to use, distribute to the public, translate and publicly display the Submitted Material on an educational, promotional and not-for-profit basis starting on the date of the participation of the competition.
-  %p.small You warrant that your Submitted Material  , including uploaded picture(s) and/or videos is free from any copyright or other third party rights that would prejudice the use of the solution, the picture and the video to the extent described above. By submitting the Submitted Material, you indemnify GIZ against all third party claims arising from the granting or exercise of the right of use under this provision and shall reimburse GIZ for all costs incurred in connection with corresponding legal defence.
-  = form.input :terms_accepted, as: :boolean, required: true, label: "I accept the above terms and conditions.".html_safe
+  = form.input :terms_accepted, as: :boolean, required: true, label: "I accept GIZ's #{link_to('licensing & copyright terms', asset_path('giz_licensing_and_copyright.pdf'), target: '_blank')}.".html_safe
   = form.input :terms_accepted, as: :boolean, required: true, label: "I accept GIZ's #{link_to('Terms & Conditions', asset_path('giz_terms_conditions.pdf'), target: '_blank')} and #{link_to('Data protection policy', asset_path('giz_data_processing.pdf'), target: '_blank')}".html_safe
 
 .form-actions.full_width_cta
