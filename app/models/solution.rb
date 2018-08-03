@@ -10,6 +10,9 @@ class Solution < ApplicationRecord
   validates :terms_accepted, inclusion: {
     in: [true], message: 'Terms must be accepted'
   }
+  validates :licensing_accepted, inclusion: {
+    in: [true], message: 'Licensing and copyright terms must be accepted'
+  }
 
   has_attached_file :hero_image,
                     styles: { medium: '300x300>', thumb: '50x50>' },

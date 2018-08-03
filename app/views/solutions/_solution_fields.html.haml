@@ -34,7 +34,7 @@
   =form.input :embedded_video_url, as: :text, label: false
 
 -if form.object.new_record?
-  = form.input :terms_accepted, as: :boolean, required: true, label: "I accept GIZ's #{link_to('licensing & copyright terms', asset_path('giz_licensing_and_copyright.pdf'), target: '_blank')}.".html_safe
+  = form.input :licensing_accepted, as: :boolean, required: true, label: "I accept GIZ's #{link_to('licensing & copyright terms', asset_path('giz_licensing_and_copyright.pdf'), target: '_blank')}.".html_safe
   = form.input :terms_accepted, as: :boolean, required: true, label: "I accept GIZ's #{link_to('Terms & Conditions', asset_path('giz_terms_conditions.pdf'), target: '_blank')} and #{link_to('Data protection policy', asset_path('giz_data_processing.pdf'), target: '_blank')}".html_safe
 
 .form-actions.full_width_cta
