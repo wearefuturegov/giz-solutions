@@ -100,6 +100,7 @@ class SolutionsController < ApplicationController
     params.require(:solution).permit(
       :title,
       :terms_accepted,
+      :licensing_accepted,
       :description,
       :business_opportunities,
       :skills_experience,
