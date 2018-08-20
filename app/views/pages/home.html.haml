@@ -10,8 +10,9 @@
             =link_to t('buttons.submit_solution'), :new_solution, class: 'button'
           - elsif ApplicationState.instance.judging?
             %p.bold=t('solution.judging.title')
+            =link_to t('buttons.browse_solution'), :solutions, class: 'button secondary'
           - elsif ApplicationState.instance.announce_winners?
-          =link_to t('buttons.browse_solution'), :solutions, class: 'button secondary'
+            =link_to t('buttons.browse_solution'), :solutions, class: 'button secondary'
 .sticky_cont
   %nav.sticky_inner
     .container
@@ -19,7 +20,7 @@
         = link_to '#top_of_site', class: 'up_link' do
           =fa_icon 'chevron-up'
         = link_to 'Back to top', '#top_of_site', class: 'active', id: 'home_link'
-        = link_to 'Challenge and solution', '#the_challenge'
+        = link_to 'Challenge and solutions', '#the_challenge'
         / = link_to 'Your solution', '#home_intro'
         = link_to 'Context', '#home_why'
         / = link_to 'Timeline', '#when'
@@ -213,7 +214,7 @@
           .image= image_tag "img_1.jpg", class: 'auto_fit_image'
           .content
             .bold Refugee Situation
-            At the beginning of 2018, Rwanda hosted around 165,000 refugees, mainly from the DR Congo and Burundi. Almost all of the refugees speak the same language as the locals - Kinyarwanda. Around 80% of refugees in Rwanda live in refugee camps. The country is also receiving Rwandan nationals who are returning home after years spent living abroad as refugees.
+            At the beginning of 2018, Rwanda hosted around 165,000 refugees, mainly from the Democratic Republic of Congo and Burundi. Almost all of the refugees speak the same language as the locals - Kinyarwanda. Around 80% of refugees in Rwanda live in refugee camps. The country is also receiving Rwandan nationals who are returning home after years spent living abroad as refugees.
 
         .third
           .image= image_tag "img_2.jpg", class: 'auto_fit_image'
@@ -292,7 +293,7 @@
       %p.bold.low_margin Fostering financial self-reliance 
       %p We are looking for solutions helping people to lead an independent life, and providing them with access to a regular income.
 
-      %p.bold.low_margin Creating a benefit for refugee and host community
+      %p.bold.low_margin Creating a benefit for refugees and host community members
       %p We are looking for solutions that are not only focused on supporting refugees, but also provide a benefit to members of host communities and help strengthen the relationships between both groups.
 
 
@@ -319,7 +320,7 @@
       %p The submitted solution is yours, but by submitting it you are allowing us to develop it further and replicate it elsewhere. By sharing your knowledge and experience with host and refugee communities, you will inspire them to adapt the solution to their local context.
 
       %p.bold.low_margin What happens to your solution after the call?
-      %p The moment you participate in the Innovation Lab, you will become a solution-mentor and work with the local members of the refugees and host community in a team. After the Innovation Lab, your team has the chance to pitch your enhanced solution to a jury for further investment.
+      %p The moment you participate in the Innovation Lab, you will become a solution-mentor and work with the local members of the refugee and host community in a team. After the Innovation Lab, your team has the chance to pitch your enhanced solution to a jury for further investment.
 
 
 
