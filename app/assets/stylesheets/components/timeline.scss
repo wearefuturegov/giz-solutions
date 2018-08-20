@@ -1,7 +1,13 @@
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 .timeline {
   position: relative;
   margin-bottom: 50px;
-  font-size: 15px;
+  font-size: 20px;
+  font-family: GravurCodensedLight, $condensed-font-family;
   .time_section {
     display: inline-block;
     width: 16%;
@@ -16,7 +22,7 @@
   }
   .top_section {
     .time_section {
-      line-height: 20px;
+      line-height: 25px;
 
       &.active {
         font-weight: 600;
@@ -93,18 +99,19 @@
       display: inline-block;
       width: 16%;
     }
-    .num_1 {
-      margin-left: 16%;
+    .num_1, .num_3 {
+      margin-left: calc(16% + 5px);
     }
-    .num_3 {
-      margin-left: 15%;
-    }
+    // .num_3 {
+    //   margin-left: 15%;
+    // }
     .highlight {
       margin-top: -5px;
       float: left;
       width: 16%;
+      line-height: 25px;
       p {
-        margin-left: -40%;
+        margin-left: -46%;
         width: 100%;
         max-width: 150px;
         text-align: center;
@@ -112,6 +119,14 @@
       }
       &.num_3 {
         margin-left: 16%;
+        p {
+          margin-left: -33%;
+        }
+      }
+      &.num_2 {
+        p {
+          margin-left: -39%;
+        }
       }
     }
   }
@@ -131,7 +146,7 @@
       }
     }
     .top_section, .bottom_section, .timeline_line, .highlighted_dates {
-      width: 35%;
+      width: 27%;
       display: inline-block;
     }
     .top_section {
@@ -182,7 +197,7 @@
       }
     }
     .bottom_section {
-      width: 16%;
+      width: auto;
       position: absolute;
       margin-top: -10px;
       .time_section {
@@ -213,7 +228,8 @@
       width: 37%;
 
       .lines {
-        width: 27%;
+        width: 16%;
+        margin-left: 6px;
         display: inline-block;
       }
       .text {
@@ -231,11 +247,11 @@
       }
       .num_1 {
         margin-top: 100px;
-        margin-left: 0;
+        margin-left: 0 !important;
       }
       .num_3 {
         margin-top: 75px;
-        margin-left: 0;
+        margin-left: 0 !important;
       }
       .highlight {
         margin-left: 0px;
@@ -245,7 +261,7 @@
         width: auto;
         display: inline-block;
         p {
-          margin-left: 0;
+          margin-left: 0 !important;
           width: 100%;
           max-width: 100%;
           text-align: left;
@@ -253,7 +269,7 @@
         }
         &.num_3 {
           margin-top: 60px;
-          margin-left: 0;
+          margin-left: 0 !important;
         }
       }
     }

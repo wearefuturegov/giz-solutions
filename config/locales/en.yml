@@ -9,7 +9,7 @@ en:
   flash:
     errors:
       not_authorised: 'You are not permitted to perform this action. Please try logging in again.'
-  strapline: "GIZ Solutions"
+  strapline: "GIZ Call for Solutions"
   buttons:
     overview: "Overview"
     submit_solution: "Submit Your Solution"
@@ -58,6 +58,6 @@ en:
     deleted:
       title: 'These solutions have been archived'
     none:
-      title: 'No Solutions have been published yet'
+      title: "We don't have any solutions yet. Be the first one to submit"
     all:
       title: "Solutions submitted"

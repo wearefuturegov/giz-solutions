@@ -67,4 +67,5 @@ $condensed-font-family: 'GravurCodensedRegular', sans-serif;
 
 .bold {
   font-family: $base-font-family-bold;
+  -webkit-font-smoothing: antialiased;
 }

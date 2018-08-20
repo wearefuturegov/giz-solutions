@@ -17,7 +17,7 @@ header {
   }
   .container {
     position: relative;
-    padding: 14px;
+    padding: 30px 15px;
   }
   .logo_bg {
     width: 33%;
@@ -46,7 +46,7 @@ header {
   }
   h2 {
     text-transform: uppercase;
-    font-family: GravurCodensedLight;
+    font-family: GravurCodensedLight, $condensed-font-family;
     margin-bottom: 0;
     font-weight: 100;
     margin-top: 0px;
