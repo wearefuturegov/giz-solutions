@@ -12,7 +12,7 @@ module ApplicationHelper
   end
 
   def page_title
-    return 'GIZ Solutions' unless solution_show_page
+    return 'GIZ Call for Solutions' unless solution_show_page
     solution.title
   end
 

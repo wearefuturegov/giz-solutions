@@ -31,6 +31,6 @@ module SendGridMailer
   end
 
   def from_email
-    @from ||= Email.new(email: "GIZ solutions <#{GizSolutions.config.support_email}>")
+    @from ||= Email.new(email: "GIZ Call for Solutions <#{GizSolutions.config.support_email}>")
   end
 end
