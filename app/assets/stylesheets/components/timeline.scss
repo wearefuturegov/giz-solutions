@@ -1,7 +1,8 @@
 .timeline {
   position: relative;
   margin-bottom: 50px;
-  font-size: 15px;
+  font-size: 20px;
+  font-family: GravurCodensedLight, $condensed-font-family;
   .time_section {
     display: inline-block;
     width: 16%;
@@ -16,7 +17,7 @@
   }
   .top_section {
     .time_section {
-      line-height: 20px;
+      line-height: 25px;
 
       &.active {
         font-weight: 600;
@@ -93,19 +94,19 @@
       display: inline-block;
       width: 16%;
     }
-    .num_1 {
-      margin-left: 16%;
+    .num_1, .num_3 {
+      margin-left: calc(16% + 5px);
     }
-    .num_3 {
-      margin-left: 15%;
-    }
+    // .num_3 {
+    //   margin-left: 15%;
+    // }
     .highlight {
       margin-top: -5px;
       float: left;
       width: 16%;
-      line-height: 20px;
+      line-height: 25px;
       p {
-        margin-left: -40%;
+        margin-left: -46%;
         width: 100%;
         max-width: 150px;
         text-align: center;
@@ -113,6 +114,14 @@
       }
       &.num_3 {
         margin-left: 16%;
+        p {
+          margin-left: -33%;
+        }
+      }
+      &.num_2 {
+        p {
+          margin-left: -39%;
+        }
       }
     }
   }
