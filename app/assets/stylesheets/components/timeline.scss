@@ -1,3 +1,8 @@
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 .timeline {
   position: relative;
   margin-bottom: 50px;
@@ -141,7 +146,7 @@
       }
     }
     .top_section, .bottom_section, .timeline_line, .highlighted_dates {
-      width: 35%;
+      width: 27%;
       display: inline-block;
     }
     .top_section {
@@ -192,7 +197,7 @@
       }
     }
     .bottom_section {
-      width: 16%;
+      width: auto;
       position: absolute;
       margin-top: -10px;
       .time_section {
@@ -224,7 +229,7 @@
 
       .lines {
         width: 16%;
-        margin-left: 14px;
+        margin-left: 6px;
         display: inline-block;
       }
       .text {
