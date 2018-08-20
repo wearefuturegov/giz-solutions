@@ -1,6 +1,7 @@
 header {
   background-color: $light-gray;
   position: relative;
+
   .logo {
     vertical-align: top;
     display: inline-block;
@@ -33,7 +34,7 @@ header {
   }
   .grey_section {
     display: inline-block;
-    margin-left: 79px;
+    margin-left: 95px;
     margin-top: 5px;
   }
   img {
@@ -45,18 +46,21 @@ header {
   }
   h2 {
     text-transform: uppercase;
-    font-family: $condensed-font-family;
+    font-family: GravurCodensedLight;
     margin-bottom: 0;
-    font-weight: 400;
+    font-weight: 100;
     margin-top: 0px;
-    margin-bottom: 5px;
-    font-size: 32px;
+    margin-bottom: 50px;
+    font-size: 38px;
     a {
       color: #666;
       &:hover {
         color: #666;
         border-bottom: 1px solid $primary-color;
       }
+    }
+    @include mob_tab {
+      margin-bottom: 25px;
     }
   }
   @media (max-width: 1076px) {
