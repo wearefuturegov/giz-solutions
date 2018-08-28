@@ -77,7 +77,7 @@ module GizSolutions
       host: config.hostname
     }
 
-    config.support_email = ENV.fetch('SUPPORT_EMAIL', 'no-reply@example.com')
+    config.support_email = 'support@solutionsgiz.de'
 
     config.action_mailer.preview_path = Rails.root.join('lib', 'mail_previews')
 
