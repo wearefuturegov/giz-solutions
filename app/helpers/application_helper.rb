@@ -17,7 +17,7 @@ module ApplicationHelper
   end
 
   def page_description
-    return "What's your solution? Contribute your solutions to improve the lives of refugees." unless solution_show_page
+    return "What's your solution? Contribute your solutions to improve the lives of refugees. #solutionschallenge" unless solution_show_page
     solution.description
   end
 
