@@ -107,6 +107,9 @@
   }
 }
 
+.alert, #alerts {
+  background-color: $primary-color;
+}
 
 .small {
   font-size: 13px;
