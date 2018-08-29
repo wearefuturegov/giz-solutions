@@ -58,6 +58,6 @@ en:
     deleted:
       title: 'These solutions have been archived'
     none:
-      title: "We don't have any solutions yet. Be the first one to submit"
+      title: "We don't have any solutions yet. Be the first one to submit a solution:"
     all:
       title: "Solutions submitted"
