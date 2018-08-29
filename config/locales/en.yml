@@ -36,7 +36,7 @@ en:
     facebook: 'Share on Facebook'
     url:
       facebook: 'https://www.facebook.com/sharer/sharer.php?u=%{share_url}'
-      twitter: "http://twitter.com/intent/tweet?status=What's your solution? Contribute your solutions to improve the lives of refugees. #solutionschallenge @giz_gmbh %{share_url}"
+      twitter: "http://twitter.com/intent/tweet?status=What's your solution? Contribute your solutions to improve the lives of refugees. #solutionschallenge %{share_url}"
   home:
     title: "How can refugees and members of host communities strengthen their relationship through shared business opportunities?"
   sign_up:
