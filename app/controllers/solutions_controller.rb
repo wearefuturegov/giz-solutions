@@ -29,7 +29,11 @@ class SolutionsController < ApplicationController
   }
 
   expose :solution_navigator, lambda {
-    SolutionNavigator.new(Solution.with_deleted.pluck(:id), params[:id].to_i)
+    if current_user&.admin?
+      SolutionNavigator.new(Solution.with_deleted.pluck(:id), params[:id].to_i)
+    else
+      SolutionNavigator.new(Solution.pluck(:id), params[:id].to_i)
+    end
   }
 
   def show;  end
