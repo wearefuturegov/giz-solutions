@@ -1,6 +1,6 @@
 .large_cta.full_width.center
   - if ApplicationState.instance.collection?
-    =link_to t('buttons.submit_solution'), :new_solution, class: 'button'
+    = link_to t('buttons.submit_solution'), current_user ? :new_solution : :new_user_registration, class: 'button'
   - elsif ApplicationState.instance.judging?
     %p.bold=t('solution.judging.title')
   - elsif ApplicationState.instance.announce_winners?
