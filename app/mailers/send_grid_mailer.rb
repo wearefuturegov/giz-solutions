@@ -8,11 +8,18 @@ module SendGridMailer
   def get_content(template, assigns = {})
     Content.new(
       type: 'text/html',
-      value: ApplicationController.render(
+      value: renderer.render(
         template: template,
         layout: nil,
         assigns: assigns
       )
+    )
+  end
+  
+  def renderer
+    ApplicationController.renderer.new(
+      http_host: ActionMailer::Base.default_url_options[:host],
+      https: ActionMailer::Base.default_url_options[:protocol] == 'https'
     )
   end
 
