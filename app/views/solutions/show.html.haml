@@ -7,7 +7,7 @@
         - if admin_logged_in
           = render partial: 'admin_buttons'
       .solution_image
-        = image_tag solution.hero_image.url, class: 'auto_fit_image'
+        = image_tag solution.hero_image.url
 
       %h1=solution.title
       %p="by #{solution.user.name}"
