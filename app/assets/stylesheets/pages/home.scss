@@ -30,7 +30,10 @@
   }
   .video {
     iframe {
-      max-width: 100%;
+      width: 100%;
+      height: auto;
+      min-height: 208px;
+      margin-bottom: 15px;
     }
   }
 }
