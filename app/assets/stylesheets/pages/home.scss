@@ -28,6 +28,11 @@
   @include mobile {
     padding-top: 50px;
   }
+  .video {
+    iframe {
+      max-width: 100%;
+    }
+  }
 }
 #giz_solutions {
   padding-top: 0;
