@@ -57,11 +57,11 @@
       %p In Rwanda, our pilot country for the Call for Solutions, refugees enjoy freedom of movement and have the right to work and establish companies. The Government of Rwanda and UNHCR (United Nations High Commissioner for Refugees) are in the process of implementing a joint strategy for supporting economic development in host communities through refugee self-reliance.
       %p.bold So how can we create more shared business opportunities between both communities?
 
-  -if ApplicationState.instance.announce_winners?
-    .container
-      %h2=t('solution.winners.title')
-      #all_solutions.inner_container
-        = render partial: 'solutions/solution', collection: winning_solutions
+  / -if ApplicationState.instance.announce_winners?
+  /   .container
+  /     %h2=t('solution.winners.title')
+  /     #all_solutions.inner_container
+  /       = render partial: 'solutions/solution', collection: winning_solutions
 
   #home_intro.home_sec.container
     .full_width
