@@ -32,36 +32,9 @@
         / = link_to "What's Next", '#next'
         = link_to 'FAQ', '#faq'
 
+
+
 #the_challenge.home_section_cont
-  .home_sec.container
-    .half
-      .sub_title What's the challenge?
-      %p Refugees often live in displacement for decades. Therefore, it is critical to enable them to become economically independent and build a life on their own in a way that benefits both the refugees and their hosting communities – who also often face substantial problems. GIZ has been developing solutions on this matter for many years together with target groups and partners. But still, there is an urgent need for more and new solutions and for new cooperations.
-      =render partial: "cta_buttons"
-
-      .up_to_date.full_width.centre
-        %p Stay up to date:
-        =link_to 'https://www.facebook.com/solutionchallenge', target: '_blank' do
-          =fa_icon 'facebook'
-          Facebook
-        =link_to 'https://www.twitter.com/solutionchallng', target: '_blank' do
-          =fa_icon 'twitter'
-          Twitter
-        =link_to 'https://www.linkedin.com/company/solutionchallenge/', target: '_blank' do
-          =fa_icon 'linkedin'
-          LinkedIn
-    .half
-      .sub_title What's the opportunity?
-      %p There is a huge untapped potential to create shared business opportunities for refugees and host communities.
-      %p Think of shared workshops and joint creation of new services or products – doing business with each other provides an opportunity to meet, reduce prejudices and improve one’s livelihood.
-      %p In Rwanda, our pilot country for the Call for Solutions, refugees enjoy freedom of movement and have the right to work and establish companies. The Government of Rwanda and UNHCR (United Nations High Commissioner for Refugees) are in the process of implementing a joint strategy for supporting economic development in host communities through refugee self-reliance.
-      %p.bold So how can we create more shared business opportunities between both communities?
-
-  / -if ApplicationState.instance.announce_winners?
-  /   .container
-  /     %h2=t('solution.winners.title')
-  /     #all_solutions.inner_container
-  /       = render partial: 'solutions/solution', collection: winning_solutions
 
   #home_intro.home_sec.container
     .full_width
@@ -78,7 +51,7 @@
 
       %p In the next 8 weeks the teams will continue to improve their products and services to further validate their businesses with the continued support of the coaches.
 
-      %p On 21st - 22nd March 2019 the teams will pitch their final business models for further investment at our Pitch Competition in Rwanda.
+      %p.bold On 21st - 22nd March 2019 the teams will pitch their final business models for further investment at our Pitch Competition in Rwanda.
 
   .home_sec.container
     .full_width
@@ -113,26 +86,63 @@
 
       %p=link_to "See their original submitted solution.", "https://solutions.giz.de/solutions/113"
 
-      / .accordion
-      /   .accord-single
-      /     .accord-toggle
-      /       .bold.red
-      /         =fa_icon "plus-circle"
-      /         Why you should participate…
-      /     .accord-cont
-      /       .half
-      /         %p.bold.low_margin Increase your impact to a global scale 
-      /         %p You have the chance to see your solution promoted through media, partners and GIZ channels and thus create more impact.
 
-      /         %p.bold.low_margin Access the expertise of the GIZ network 
-      /         %p Learn how to create innovative projects in inter-cultural teams and benefit from the expertise and support of GIZ and its international network of experts from leading global and local organisations.
 
-      /       .half
-      /         %p.bold.low_margin Enhance your innovation skills in our Innovation Lab in Rwanda
-      /         %p The objective of the Innovation Lab in Rwanda is to push your solution and adapt it locally. In a one week workshop, you will develop several ideas to enhance your submitted solution together with local design experts and members of the refugee and host communities.
 
-      /         %p.bold.low_margin Have all costs of your participation covered
-      /         %p GIZ will cover all your travel costs and provide room and board. If your solution is selected you will also receive an additional prize money of €1,500.
+  .home_sec.container
+    .half
+      .sub_title What was the challenge?
+      %p Refugees often live in displacement for decades. Therefore, it is critical to enable them to become economically independent and build a life on their own in a way that benefits both the refugees and their hosting communities – who also often face substantial problems. GIZ has been developing solutions on this matter for many years together with target groups and partners. But still, there is an urgent need for more and new solutions and for new cooperations.
+      =render partial: "cta_buttons"
+
+      .up_to_date.full_width.centre
+        %p Stay up to date:
+        =link_to 'https://www.facebook.com/solutionchallenge', target: '_blank' do
+          =fa_icon 'facebook'
+          Facebook
+        =link_to 'https://www.twitter.com/solutionchallng', target: '_blank' do
+          =fa_icon 'twitter'
+          Twitter
+        =link_to 'https://www.linkedin.com/company/solutionchallenge/', target: '_blank' do
+          =fa_icon 'linkedin'
+          LinkedIn
+    .half
+      .sub_title What's the opportunity?
+      %p There is a huge untapped potential to create shared business opportunities for refugees and host communities.
+      %p Think of shared workshops and joint creation of new services or products – doing business with each other provides an opportunity to meet, reduce prejudices and improve one’s livelihood.
+      %p In Rwanda, our pilot country for the Call for Solutions, refugees enjoy freedom of movement and have the right to work and establish companies. The Government of Rwanda and UNHCR (United Nations High Commissioner for Refugees) are in the process of implementing a joint strategy for supporting economic development in host communities through refugee self-reliance.
+      %p.bold So how can we create more shared business opportunities between both communities?
+
+  / -if ApplicationState.instance.announce_winners?
+  /   .container
+  /     %h2=t('solution.winners.title')
+  /     #all_solutions.inner_container
+  /       = render partial: 'solutions/solution', collection: winning_solutions
+
+
+
+
+
+  / .accordion
+  /   .accord-single
+  /     .accord-toggle
+  /       .bold.red
+  /         =fa_icon "plus-circle"
+  /         Why you should participate…
+  /     .accord-cont
+  /       .half
+  /         %p.bold.low_margin Increase your impact to a global scale 
+  /         %p You have the chance to see your solution promoted through media, partners and GIZ channels and thus create more impact.
+
+  /         %p.bold.low_margin Access the expertise of the GIZ network 
+  /         %p Learn how to create innovative projects in inter-cultural teams and benefit from the expertise and support of GIZ and its international network of experts from leading global and local organisations.
+
+  /       .half
+  /         %p.bold.low_margin Enhance your innovation skills in our Innovation Lab in Rwanda
+  /         %p The objective of the Innovation Lab in Rwanda is to push your solution and adapt it locally. In a one week workshop, you will develop several ideas to enhance your submitted solution together with local design experts and members of the refugee and host communities.
+
+  /         %p.bold.low_margin Have all costs of your participation covered
+  /         %p GIZ will cover all your travel costs and provide room and board. If your solution is selected you will also receive an additional prize money of €1,500.
 
 
 
