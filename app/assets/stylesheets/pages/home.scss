@@ -21,12 +21,12 @@
 }
 
 .home_sec {
-  padding-top: 110px;
+  padding-top: 80px;
   &:focus {
     outline: none;
   }
   @include mobile {
-    padding-top: 50px;
+    padding-top: 40px;
   }
   .video {
     iframe {
