@@ -13,6 +13,8 @@
             =link_to t('buttons.browse_solution'), :solutions, class: 'button secondary'
           - elsif ApplicationState.instance.announce_winners?
             =link_to t('buttons.browse_solution'), :solutions, class: 'button secondary'
+          = link_to 'Download Call for Solutions Toolkit', download_pdf_path, class: 'button', title: 'Download our Toolkit PDF'
+
 .sticky_cont
   %nav.sticky_inner
     .container
@@ -35,6 +37,18 @@
 
 
 #the_challenge.home_section_cont
+
+  #home_intro.home_sec.container
+    .full_width
+      %h2 Call for Solutions Toolkit
+
+      %p.bold A toolkit for setting up a Call for Solutions
+
+      %p This toolkit wants to inspire and support our partners - ministries, NGOs and private sector organisations, by sharing experiences and lessons learned when scaling innovation. 
+
+      = link_to 'Download Call for Solutions Toolkit', download_pdf_path, class: 'button', title: 'Download our Toolkit PDF'
+
+
   #home_intro.home_sec.container
     .full_width
       %h2 Call for Solutions – What makes the difference?
@@ -51,9 +65,6 @@
       %p
         We would love to share and discuss with you how organizations in international development can make the best use of a Call for Solutions.
         %span.bold Are you interested in conducting a Call for Solutions and learning from our experience? Feel free to reach out to us!
-
-
-
 
   #home_intro.home_sec.container
     .full_width
