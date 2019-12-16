@@ -42,3 +42,7 @@ DEFAULT_PASSWORD=SomePassword
 * rake db:seed # creates a test user and adds some dummy solutions
 
 Try 'rails s'. Good luck!
+
+## Deploying to production 
+
+Use `cap production deploy` with an authorised ssh key
